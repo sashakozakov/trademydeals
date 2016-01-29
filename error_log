@@ -1,0 +1,72 @@
+[28-Feb-2015 08:57:58 UTC] PHP Notice:  Undefined variable: email1 in /home/trademydealscom/public_html/contact.php on line 14
+[17-Jun-2015 15:53:15 UTC] PHP Fatal error:  Call to undefined function getPostDetails() in /home/trademydealscom/public_html/editdeals.php on line 8
+[17-Jun-2015 19:34:28 UTC] PHP Fatal error:  Call to undefined function getPostDetails() in /home/trademydealscom/public_html/editdeals.php on line 8
+[18-Jun-2015 07:23:36 UTC] PHP Fatal error:  Call to undefined function getPostDetails() in /home/trademydealscom/public_html/editdeals.php on line 8
+[18-Jun-2015 16:05:39 UTC] PHP Fatal error:  Call to undefined function getPostDetails() in /home/trademydealscom/public_html/editdeals.php on line 8
+[18-Jun-2015 16:07:16 UTC] PHP Fatal error:  Call to undefined function getPostDetails() in /home/trademydealscom/public_html/editdeals.php on line 8
+[18-Jun-2015 16:07:28 UTC] PHP Fatal error:  Call to undefined function getPostDetails() in /home/trademydealscom/public_html/editdeals.php on line 8
+[18-Jun-2015 16:12:23 UTC] PHP Fatal error:  Call to undefined function getPostDetails() in /home/trademydealscom/public_html/editjobs.php on line 9
+[18-Jun-2015 19:17:05 UTC] PHP Fatal error:  Call to undefined function getPostDetails() in /home/trademydealscom/public_html/editdeals.php on line 8
+[26-Oct-2015 09:11:09 UTC] PHP Fatal error:  Class 'SafeMySQL' not found in /home/trademydealscom/public_html/ajax-unlink-image.php on line 9
+[22-Nov-2015 16:11:10 UTC] PHP Fatal error:  Call to a member function fetch() on a non-object in /home/trademydealscom/public_html/signup_new.php on line 65
+[22-Nov-2015 16:11:32 UTC] PHP Fatal error:  Call to a member function fetch() on a non-object in /home/trademydealscom/public_html/signup_new.php on line 65
+[22-Nov-2015 16:11:50 UTC] PHP Fatal error:  Call to a member function fetch() on a non-object in /home/trademydealscom/public_html/signup_new.php on line 65
+[17-Dec-2015 12:50:50 UTC] PHP Fatal error:  Using $this when not in object context in /home/trademydealscom/public_html/index.php on line 9
+[17-Dec-2015 12:51:04 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/trademydealscom/public_html/index.php on line 9
+[17-Dec-2015 12:53:05 UTC] PHP Fatal error:  Using $this when not in object context in /home/trademydealscom/public_html/index.php on line 7
+[17-Dec-2015 12:53:56 UTC] PHP Fatal error:  Using $this when not in object context in /home/trademydealscom/public_html/index.php on line 7
+[26-Jan-2016 03:14:33 UTC] PHP Notice:  Undefined index: text in /home/trademydealscom/public_html/ads_process.php on line 21
+[26-Jan-2016 03:14:33 UTC] PHP Notice:  Undefined index: highlight in /home/trademydealscom/public_html/ads_process.php on line 22
+[26-Jan-2016 03:14:33 UTC] PHP Notice:  Undefined index: promote_ads1 in /home/trademydealscom/public_html/ads_process.php on line 23
+[26-Jan-2016 03:14:33 UTC] PHP Notice:  Undefined index: promote_ads2 in /home/trademydealscom/public_html/ads_process.php on line 24
+[26-Jan-2016 03:14:33 UTC] PHP Notice:  Undefined index: promote_ads3 in /home/trademydealscom/public_html/ads_process.php on line 25
+[26-Jan-2016 03:14:33 UTC] PHP Notice:  Undefined index: promote_ads4 in /home/trademydealscom/public_html/ads_process.php on line 26
+[26-Jan-2016 03:14:33 UTC] PHP Notice:  Undefined index: home in /home/trademydealscom/public_html/ads_process.php on line 30
+[26-Jan-2016 03:14:33 UTC] PHP Notice:  Undefined index: topfeature in /home/trademydealscom/public_html/ads_process.php on line 31
+[26-Jan-2016 03:14:33 UTC] PHP Strict Standards:  Only variables should be passed by reference in /home/trademydealscom/public_html/ads_process.php on line 39
+[26-Jan-2016 03:14:33 UTC] PHP Notice:  Undefined variable: extension in /home/trademydealscom/public_html/ads_process.php on line 47
+[26-Jan-2016 03:14:33 UTC] PHP Notice:  Undefined variable: allowedExts in /home/trademydealscom/public_html/ads_process.php on line 47
+[26-Jan-2016 03:14:33 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/trademydealscom/public_html/ads_process.php on line 47
+[26-Jan-2016 03:14:33 UTC] PHP Notice:  Undefined variable: file_name in /home/trademydealscom/public_html/ads_process.php on line 74
+[26-Jan-2016 03:14:33 UTC] PHP Notice:  Undefined variable: temp1 in /home/trademydealscom/public_html/ads_process.php on line 105
+[26-Jan-2016 03:14:33 UTC] PHP Notice:  Undefined variable: status in /home/trademydealscom/public_html/ads_process.php on line 105
+[26-Jan-2016 03:14:33 UTC] PHP Notice:  Undefined index: upload_file in /home/trademydealscom/public_html/custom_function.php on line 57
+[26-Jan-2016 03:14:33 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trademydealscom/public_html/custom_function.php on line 57
+[26-Jan-2016 03:14:33 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/trademydealscom/public_html/ads_process.php:21) in /home/trademydealscom/public_html/ads_process.php on line 111
+[26-Jan-2016 03:15:26 UTC] PHP Notice:  Undefined index: text in /home/trademydealscom/public_html/ads_process.php on line 21
+[26-Jan-2016 03:15:26 UTC] PHP Notice:  Undefined index: highlight in /home/trademydealscom/public_html/ads_process.php on line 22
+[26-Jan-2016 03:15:26 UTC] PHP Notice:  Undefined index: promote_ads1 in /home/trademydealscom/public_html/ads_process.php on line 23
+[26-Jan-2016 03:15:26 UTC] PHP Notice:  Undefined index: promote_ads2 in /home/trademydealscom/public_html/ads_process.php on line 24
+[26-Jan-2016 03:15:26 UTC] PHP Notice:  Undefined index: promote_ads3 in /home/trademydealscom/public_html/ads_process.php on line 25
+[26-Jan-2016 03:15:26 UTC] PHP Notice:  Undefined index: promote_ads4 in /home/trademydealscom/public_html/ads_process.php on line 26
+[26-Jan-2016 03:15:26 UTC] PHP Notice:  Undefined index: home in /home/trademydealscom/public_html/ads_process.php on line 30
+[26-Jan-2016 03:15:26 UTC] PHP Notice:  Undefined index: topfeature in /home/trademydealscom/public_html/ads_process.php on line 31
+[26-Jan-2016 03:15:26 UTC] PHP Strict Standards:  Only variables should be passed by reference in /home/trademydealscom/public_html/ads_process.php on line 39
+[26-Jan-2016 03:15:26 UTC] PHP Notice:  Undefined variable: extension in /home/trademydealscom/public_html/ads_process.php on line 47
+[26-Jan-2016 03:15:26 UTC] PHP Notice:  Undefined variable: allowedExts in /home/trademydealscom/public_html/ads_process.php on line 47
+[26-Jan-2016 03:15:26 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/trademydealscom/public_html/ads_process.php on line 47
+[26-Jan-2016 03:15:26 UTC] PHP Notice:  Undefined variable: file_name in /home/trademydealscom/public_html/ads_process.php on line 74
+[26-Jan-2016 03:15:26 UTC] PHP Notice:  Undefined variable: temp1 in /home/trademydealscom/public_html/ads_process.php on line 105
+[26-Jan-2016 03:15:26 UTC] PHP Notice:  Undefined variable: status in /home/trademydealscom/public_html/ads_process.php on line 105
+[26-Jan-2016 03:15:26 UTC] PHP Notice:  Undefined index: upload_file in /home/trademydealscom/public_html/custom_function.php on line 57
+[26-Jan-2016 03:15:26 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trademydealscom/public_html/custom_function.php on line 57
+[26-Jan-2016 03:15:26 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/trademydealscom/public_html/ads_process.php:21) in /home/trademydealscom/public_html/ads_process.php on line 111
+[26-Jan-2016 03:15:57 UTC] PHP Notice:  Undefined index: text in /home/trademydealscom/public_html/ads_process.php on line 21
+[26-Jan-2016 03:15:57 UTC] PHP Notice:  Undefined index: highlight in /home/trademydealscom/public_html/ads_process.php on line 22
+[26-Jan-2016 03:15:57 UTC] PHP Notice:  Undefined index: promote_ads1 in /home/trademydealscom/public_html/ads_process.php on line 23
+[26-Jan-2016 03:15:57 UTC] PHP Notice:  Undefined index: promote_ads2 in /home/trademydealscom/public_html/ads_process.php on line 24
+[26-Jan-2016 03:15:57 UTC] PHP Notice:  Undefined index: promote_ads3 in /home/trademydealscom/public_html/ads_process.php on line 25
+[26-Jan-2016 03:15:57 UTC] PHP Notice:  Undefined index: promote_ads4 in /home/trademydealscom/public_html/ads_process.php on line 26
+[26-Jan-2016 03:15:57 UTC] PHP Notice:  Undefined index: home in /home/trademydealscom/public_html/ads_process.php on line 30
+[26-Jan-2016 03:15:57 UTC] PHP Notice:  Undefined index: topfeature in /home/trademydealscom/public_html/ads_process.php on line 31
+[26-Jan-2016 03:15:57 UTC] PHP Strict Standards:  Only variables should be passed by reference in /home/trademydealscom/public_html/ads_process.php on line 39
+[26-Jan-2016 03:15:57 UTC] PHP Notice:  Undefined variable: extension in /home/trademydealscom/public_html/ads_process.php on line 47
+[26-Jan-2016 03:15:57 UTC] PHP Notice:  Undefined variable: allowedExts in /home/trademydealscom/public_html/ads_process.php on line 47
+[26-Jan-2016 03:15:57 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/trademydealscom/public_html/ads_process.php on line 47
+[26-Jan-2016 03:15:57 UTC] PHP Notice:  Undefined variable: file_name in /home/trademydealscom/public_html/ads_process.php on line 74
+[26-Jan-2016 03:15:57 UTC] PHP Notice:  Undefined variable: temp1 in /home/trademydealscom/public_html/ads_process.php on line 105
+[26-Jan-2016 03:15:57 UTC] PHP Notice:  Undefined variable: status in /home/trademydealscom/public_html/ads_process.php on line 105
+[26-Jan-2016 03:15:57 UTC] PHP Notice:  Undefined index: upload_file in /home/trademydealscom/public_html/custom_function.php on line 57
+[26-Jan-2016 03:15:57 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/trademydealscom/public_html/custom_function.php on line 57
+[26-Jan-2016 03:15:57 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/trademydealscom/public_html/ads_process.php:21) in /home/trademydealscom/public_html/ads_process.php on line 111
+[28-Jan-2016 11:42:51 UTC] PHP Fatal error:  Call to undefined function update_user_visit() in /home/trademydealscom/public_html/header.php on line 6

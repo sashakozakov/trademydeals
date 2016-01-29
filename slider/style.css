@@ -1,0 +1,32 @@
+
+.gallery-area{
+	width:100%;
+	overflow:hidden;
+	position:relative;
+	margin:0px;
+	z-index: 1;
+}
+.gallery-area .slider{
+
+	list-style:none;
+	padding:0;
+	margin:0;
+	overflow:hidden;
+}
+.gallery-area .slider li{
+	float:left;
+    position: relative;
+}
+.gallery-area .slider img {
+	vertical-align:top;
+	border-radius:5px;
+	-webkit-border-radius:5px;
+}
+.gallery-area .switcher{
+	list-style:none;
+	padding:0;
+	margin:0;
+	position:absolute;
+	top:30px;
+	right:30px;
+ }

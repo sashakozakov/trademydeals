@@ -1,0 +1,11 @@
+<?php
+$country=$_POST['country'];
+$fname=$_POST['payer_fname'];
+$lname=$_POST['payer_lname'];
+$companyname=$_POST['companyname'];
+$city=$_POST['city'];
+$state=$_POST['state'];
+$zipcode=$_POST['payer_zip'];
+$phone=$_POST['phone'];
+$email=$_POST["payer_email"];
+?>
