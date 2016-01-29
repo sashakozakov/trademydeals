@@ -5,11 +5,11 @@ $static=mysql_fetch_array($username);
 $membership_table=mysql_query("SELECT * FROM membership WHERE user_id=$user_id ORDER BY id desc LIMIT 1");
 $membership_value=mysql_fetch_array($membership_table);
 ?>
-    <?php 
+    <?php
 if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership') { ?>
 <form action="ads_process.php" method="post" enctype="multipart/form-data" name="listForm" >
-<?php 
-} 
+<?php
+}
 else{ ?>
 <form action="paypal2/paypal.php" method="post" enctype="multipart/form-data" name="listForm" >
 <?php
@@ -60,13 +60,13 @@ else{ ?>
                                 <div class="col-lg-1">
                                 </div>
                             </div>
-                            
+
                         </div>
-                        
+
                     </div>
-                    
+
                 </div>
-              
+
                 <div class="col-lg-12">
                   <div class="deals_content">
                       <br>
@@ -114,13 +114,13 @@ else{ ?>
                                 <div class="col-lg-2">
                                 </div>
                             </div>
-                            
+
                         </div>
-                        
+
                     </div>
-                    
+
                 </div>
-              
+
                 <div class="col-lg-12">
                   <div class="deals_content">
                       <br>
@@ -128,8 +128,8 @@ else{ ?>
                           <h4>Your Contact Information</h4>
                         </div>
                         <div class="deals_form">
-                          
-                            
+
+
                             <div class="col-lg-12" style="margin-top:20px;">
                                 <div class="col-lg-3"> <span class="country_code"></span>
                                     <p>Phone</p>
@@ -150,13 +150,13 @@ else{ ?>
                                 <div class="col-lg-2">
                                 </div>
                             </div>
-                            
+
                         </div>
-                        
+
                     </div>
-                    
+
                 </div>
-            
+
                 <div class="col-lg-12">
                   <div class="deals_content">
                       <br>
@@ -164,8 +164,8 @@ else{ ?>
                           <h4>Links and Pictures</h4>
                         </div>
                         <div class="deals_form">
-                          
-                            
+
+
                             <div class="col-lg-12">
                                 <div class="col-lg-1">
                                     <input type="checkbox" class=" click1" name="website" value="5"  id="website"                onClick="checkTotal()">
@@ -173,7 +173,7 @@ else{ ?>
                                 <div class="col-lg-4">
                                      <a href="#"><button type="button" class="btn btn-warning btn-sm" style="border:none; margin-left:-30px; margin-top:5px;">Website Link</button>&nbsp; 7days - 58.50</a>
                                 </div>
-                                
+
                                  <div class="col-lg-1">
                                     <input type="checkbox" class="click11" >
                                 </div>
@@ -209,7 +209,7 @@ else{ ?>
                                 </div>
                                 <div class="col-lg-2">
                                 </div>
-                            </div>  
+                            </div>
                             <div class="col-lg-12" style="margin-top:10px;" id="deals_click111">
                                 <div class="col-lg-3">
                                    <p>Logo image<i style="margin-left:10px; color:#CC0000;">*</i></p>
@@ -221,15 +221,15 @@ else{ ?>
                                 </div>
                                 <div class="col-lg-7">
                                 </div>
-                            </div> 
+                            </div>
                              <div class="col-lg-12" style="margin-top:10px;">
-                             
-                             </div> 
-                            </div>                       
+
+                             </div>
+                            </div>
                         </div>
-                    
+
                  </div>
-               <script type="text/javascript "src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script> 
+               <script type="text/javascript "src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 <script type='text/javascript'>
 $(document).ready(function(){
 $("#show1").show();
@@ -315,8 +315,8 @@ $(".click6").change(function(){
                           <h4>Promote Your Ad</h4>
                         </div>
                         <div class="deals_form">
-                          
-                            
+
+
                             <div class="col-lg-12">
                                 <div class="col-lg-1">
                                     <input type="checkbox" class="click2" name="highlight" value="high">
@@ -325,12 +325,12 @@ $(".click6").change(function(){
                                 <p style="background:#f79e12; padding:5px; margin-left:-20px; margin-top:5px;">Hightlighted Ad</p>
                                 </div>
                                 <div id="show1" class="col-lg-6"></div>
-                            </div>  
+                            </div>
                             <div class="deals_work2">
                              <div class="col-lg-12">
                               <div class="col-lg-1"></div>
-                              <?php 
-if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership') 
+                              <?php
+if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership')
 {
 }
               else  {?>
@@ -364,9 +364,9 @@ if ($static['status']=='Gold Membership' )
                                 <p style=" margin-left:-20px; margin-top:5px;">Become a member:</p>
                                 </div>
                                 <div class="col-lg-6">
-                                
+
                                 </div>
-                              
+
                             </div><div class="deals_work7">
                              <div class="col-lg-12"> <?php
 if ($static['status']=='Pro Membership' )
@@ -377,12 +377,12 @@ if ($static['status']=='Pro Membership' )
                               <div class="col-lg-1">
                                     <input type="radio" name="membership" value="50"  onClick="checksubtotal(this.value)" >
                                 </div>
-                                
+
                                 <div class="col-lg-2">
                                 <p style=" margin-left:-20px; margin-top:10px;">pro member -$50per month</p>
                                 </div><?php } ?>
                                 <div class="col-lg-2">
-                                
+
                                 </div>
                                 <div class="col-lg-1">
                                     <input type="radio"  name="membership" value="80"  onClick="checksubtotal(this.value)">
@@ -391,9 +391,9 @@ if ($static['status']=='Pro Membership' )
                                 <p style=" margin-left:-20px; margin-top:10px;">Gold member -$80per month</p>
                                 </div>
                                 <div class="col-lg-3">
-                                
+
                                 </div>
-                              
+
                             </div>
                             <div class="col-lg-12"> <?php
 if ($static['status']=='Pro Membership' )
@@ -402,25 +402,25 @@ if ($static['status']=='Pro Membership' )
                          else {  ?>
                               <div class="col-lg-2"></div>
                               <div class="col-lg-4" style="border:#fff solid 1px;">
-                                
+
                                 <p style=" margin-top:10px;">you'll have 5 highlighted Ads included + more</p>
                                   <button type="button" class="btn btn-sm btn-warning pull-right" style="margin-bottom:20px;">Read More</button>
                                 </div><?php } ?>
                                 <div class="col-lg-2">
-                                   
+
                                 </div>
                                 <div class="col-lg-4" style="border:#fff solid 1px;">
                                  <p style=" margin-left:-10px; margin-top:10px;">you'll have 10 highlighted Ads included + a lot more</p>
                                  <button type="button" class="btn btn-sm btn-warning pull-right" style="margin-bottom:20px;">Read More</button>
                                 </div>
                                 <div class="col-lg-1">
-                                
+
                                 </div>
-                              
+
                             </div>
                                           </div><?php } ?>
 
-                          </div> 
+                          </div>
                              <div class="col-lg-12">
                                 <div class="col-lg-1">
                                     <input type="checkbox" class=" click3" name="promote_ads1" value="top">
@@ -429,11 +429,11 @@ if ($static['status']=='Pro Membership' )
                                 <p style="background:#f79e12; padding:5px; margin-left:-20px; margin-top:5px;">Top Ads</p>
                                 </div>
                                 <div id="show2" class="col-lg-6"></div>
-                            </div>  
+                            </div>
                             <div class="deals_work3">
                              <div class="col-lg-12">
                               <div class="col-lg-1"></div>
-                              <?php 
+                              <?php
 if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership') {
 }
               else  {?>
@@ -467,9 +467,9 @@ if ($static['status']=='Gold Membership' )
                                 <p style=" margin-left:-20px; margin-top:5px;">Become a member:</p>
                                 </div>
                                 <div class="col-lg-6">
-                                
+
                                 </div>
-                              
+
                             </div><?php } ?><div class="deals_work8">
                              <div class="col-lg-12"> <?php
 if ($static['status']=='Pro Membership' )
@@ -480,12 +480,12 @@ if ($static['status']=='Pro Membership' )
                               <div class="col-lg-1">
                                     <input type="radio" name="member1" value="50" onClick="checksubtotal(this.value)">
                                 </div>
-                                
+
                                 <div class="col-lg-2">
                                 <p style=" margin-left:-20px; margin-top:10px;">pro member -$50 per month</p>
                                 </div><?php } ?>
                                 <div class="col-lg-2">
-                                
+
                                 </div>
                                 <div class="col-lg-1">
                                     <input type="radio"  name="member1" value="80" onClick="checksubtotal(this.value)">
@@ -494,9 +494,9 @@ if ($static['status']=='Pro Membership' )
                                 <p style=" margin-left:-20px; margin-top:10px;">Gold member -$80 per month</p>
                                 </div>
                                 <div class="col-lg-3">
-                                
+
                                 </div>
-                              
+
                             </div>
                             <div class="col-lg-12"> <?php
 if ($static['status']=='Pro Membership' )
@@ -505,25 +505,25 @@ if ($static['status']=='Pro Membership' )
                          else {  ?>
                               <div class="col-lg-2"></div>
                               <div class="col-lg-4" style="border:#fff solid 1px;">
-                                
+
                                 <p style=" margin-top:10px;">you'll have 3 top Ads included + more </p>
                                   <button type="button" class="btn btn-sm btn-warning pull-right" style="margin-bottom:20px;">Read More</button>
                                 </div><?php } ?>
                                 <div class="col-lg-2">
-                                   
+
                                 </div>
                                 <div class="col-lg-4" style="border:#fff solid 1px;">
                                  <p style=" margin-left:-10px; margin-top:10px;">you'll have 6 top Ads included + a lot more</p>
                                  <button type="button" class="btn btn-sm btn-warning pull-right" style="margin-bottom:20px;">Read More</button>
                                 </div>
                                 <div class="col-lg-1">
-                                
+
                                 </div>
                               </div><?php } ?>
                             </div>
-                          </div> 
-                          
-                          
+                          </div>
+
+
                            <div class="col-lg-12">
                                 <div class="col-lg-1">
                                     <input type="checkbox" class=" click4" name="promote_ads2" value="home">
@@ -532,11 +532,11 @@ if ($static['status']=='Pro Membership' )
                                 <p style="background:#f79e12; padding:5px; margin-left:-20px; margin-top:5px;">Home page Gallery Ads</p>
                                 </div>
                                 <div id="show3" class="col-lg-6"></div>
-                            </div>  
+                            </div>
                             <div class="deals_work4">
                              <div class="col-lg-12">
                               <div class="col-lg-1"></div>
-                              <?php 
+                              <?php
 if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership') {
 }
               else  {?>
@@ -570,9 +570,9 @@ if ($static['status']=='Gold Membership' )
                                 <p style=" margin-left:-20px; margin-top:5px;">Become a member:</p>
                                 </div>
                                 <div class="col-lg-6">
-                                
+
                                 </div>
-                              
+
                             </div><?php } ?>
               <div class="deals_work9">
                              <div class="col-lg-12"> <?php
@@ -584,12 +584,12 @@ if ($static['status']=='Pro Membership' )
                               <div class="col-lg-1">
                                     <input type="radio" name="membership_home" value="50" onClick="checksubtotal(this.value)">
                                 </div>
-                                
+
                                 <div class="col-lg-2">
                                 <p style=" margin-left:-20px; margin-top:10px;">pro member -$50 per month</p>
                                 </div><?php } ?>
                                 <div class="col-lg-2">
-                                
+
                                 </div>
                                 <div class="col-lg-1">
                                     <input type="radio"  name="membership_home" value="80" onClick="checksubtotal(this.value)">
@@ -598,9 +598,9 @@ if ($static['status']=='Pro Membership' )
                                 <p style=" margin-left:-20px; margin-top:10px;">Gold member -$80 per month</p>
                                 </div>
                                 <div class="col-lg-3">
-                                
+
                                 </div>
-                              
+
                             </div>
                             <div class="col-lg-12"> <?php
 if ($static['status']=='Pro Membership' )
@@ -609,25 +609,25 @@ if ($static['status']=='Pro Membership' )
                          else {  ?>
                               <div class="col-lg-2"></div>
                               <div class="col-lg-4" style="border:#fff solid 1px;">
-                                
+
                                 <p style=" margin-top:10px;">you'll have 5 home page Ads included + more </p>
                                   <button type="button" class="btn btn-sm btn-warning pull-right" style="margin-bottom:20px;">Read More</button>
                                 </div><?php } ?>
                                 <div class="col-lg-2">
-                                   
+
                                 </div>
                                 <div class="col-lg-4" style="border:#fff solid 1px;">
                                  <p style=" margin-left:-10px; margin-top:10px;">you'll have 10 home page Ads included + a lot more</p>
                                  <button type="button" class="btn btn-sm btn-warning pull-right" style="margin-bottom:20px;">Read More</button>
                                 </div>
                                 <div class="col-lg-1">
-                                
+
                                 </div>
                               </div><?php } ?>
                             </div>
-                          </div> 
-                            
-                           
+                          </div>
+
+
                              <div class="col-lg-12">
                                 <div class="col-lg-1">
                                     <input type="checkbox" class=" click5" name="promote_ads3" value="sidebar">
@@ -636,11 +636,11 @@ if ($static['status']=='Pro Membership' )
                                 <p style="background:#f79e12; padding:5px; margin-left:-20px;margin-top:5px;">Sidebar Ad</p>
                                 </div>
                                 <div id="show4" class="col-lg-6"></div>
-                            </div>   
+                            </div>
                             <div class="deals_work5">
                              <div class="col-lg-12">
                               <div class="col-lg-1"></div>
-                              <?php 
+                              <?php
 if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership') {
 }
               else  {?>
@@ -674,9 +674,9 @@ if ($static['status']=='Gold Membership' )
                                 <p style=" margin-left:-20px; margin-top:5px;">Become a member:</p>
                                 </div>
                                 <div class="col-lg-6">
-                                
+
                                 </div>
-                              
+
                             </div><?php } ?><div class="deals_work10">
                              <div class="col-lg-12"> <?php
 if ($static['status']=='Pro Membership' )
@@ -687,12 +687,12 @@ if ($static['status']=='Pro Membership' )
                               <div class="col-lg-1">
                                     <input type="radio" name="membership_sidebar" value="50" onClick="checksubtotal(this.value)">
                                 </div>
-                                
+
                                 <div class="col-lg-2">
                                 <p style=" margin-left:-20px; margin-top:10px;">pro member -$50 per month</p>
                                 </div><?php } ?>
                                 <div class="col-lg-2">
-                                
+
                                 </div>
                                 <div class="col-lg-1">
                                     <input type="radio"  name="membership_sidebar" value="80" onClick="checksubtotal(this.value)">
@@ -701,9 +701,9 @@ if ($static['status']=='Pro Membership' )
                                 <p style=" margin-left:-20px; margin-top:10px;">Gold member -$80 per month</p>
                                 </div>
                                 <div class="col-lg-3">
-                                
+
                                 </div>
-                              
+
                             </div>
                             <div class="col-lg-12"> <?php
 if ($static['status']=='Pro Membership' )
@@ -712,23 +712,23 @@ if ($static['status']=='Pro Membership' )
                          else {  ?>
                               <div class="col-lg-2"></div>
                               <div class="col-lg-4" style="border:#fff solid 1px;">
-                                
+
                                 <p style=" margin-top:10px;">you'll have 2 sidebar Ads included + more</p>
                                   <button type="button" class="btn btn-sm btn-warning pull-right" style="margin-bottom:20px;">Read More</button>
                                 </div><?php } ?>
                                 <div class="col-lg-2">
-                                   
+
                                 </div>
                                 <div class="col-lg-4" style="border:#fff solid 1px;">
                                  <p style=" margin-left:-10px; margin-top:10px;">you'll have 4 sidebar Ads included + a lot more</p>
                                  <button type="button" class="btn btn-sm btn-warning pull-right" style="margin-bottom:20px;">Read More</button>
                                 </div>
                                 <div class="col-lg-1">
-                                
+
                                 </div>
                               </div><?php } ?>
                             </div>
-                          </div>    
+                          </div>
                             <div class="col-lg-12">
                                 <div class="col-lg-1">
                                     <input type="checkbox" class=" click6" name="promote_ads4" value="slider">
@@ -737,16 +737,16 @@ if ($static['status']=='Pro Membership' )
                                 <p style="background:#f79e12; padding:5px; margin-left:-20px;margin-top:5px;">Top Feature Home page slider Ad</p>
                                 </div>
                                 <div class="col-lg-6"></div>
-                            </div> 
+                            </div>
                            <div class="deals_work6">
                              <div class="col-lg-12">
                               <div class="col-lg-1"></div>
-                              <?php 
+                              <?php
 if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership') {
 }
               else  {?>
                                 <div class="col-lg-1">
-                                    <input type="radio" name="sliderdeals" value="20" onClick="subtotalnew3()"> 
+                                    <input type="radio" name="sliderdeals" value="20" onClick="subtotalnew3()">
                                 </div>
                                 <div class="col-lg-3">
                                 <p style=" margin-left:-20px; margin-top:5px;">$20</p>
@@ -775,9 +775,9 @@ if ($static['status']=='Gold Membership' )
                                 <p style=" margin-left:-20px; margin-top:5px;">Become a member:</p>
                                 </div>
                                 <div class="col-lg-6">
-                                
+
                                 </div>
-                              
+
                             </div><?php } ?> <div class="deals_work11">
                              <div class="col-lg-12"> <?php
 if ($static['status']=='Pro Membership' )
@@ -788,12 +788,12 @@ if ($static['status']=='Pro Membership' )
                               <div class="col-lg-1">
                                     <input type="radio" class="click11" name="membership_topfeature" value="50"                  onClick="checksubtotal(this.value)">
                                 </div>
-                                
+
                                 <div class="col-lg-2">
                                 <p style=" margin-left:-20px; margin-top:10px;">Upgrade Pro Membership</p>
                                 </div><?php } ?>
                                 <div class="col-lg-2">
-                                
+
                                 </div>
                                 <div class="col-lg-1">
                                     <input type="radio"  name="membership_topfeature" value="80" onClick="checksubtotal(this.value)">
@@ -802,11 +802,11 @@ if ($static['status']=='Pro Membership' )
                                 <p style=" margin-left:-20px; margin-top:10px;">Upgrade Gold Membership</p>
                                 </div>
                                 <div class="col-lg-3">
-                                
+
                                 </div>
-                              
+
                             </div>
-            
+
                             <div class="col-lg-12"> <?php
 if ($static['status']=='Pro Membership' )
 
@@ -814,12 +814,12 @@ if ($static['status']=='Pro Membership' )
                          else {  ?>
                               <div class="col-lg-2"></div>
                               <div class="col-lg-4" style="border:#fff solid 1px;">
-                                
+
                                 <p style=" margin-top:10px;">you'll have 4 sidebar Ads included + a lot more</p>
                                   <button type="button" class="btn btn-sm btn-warning pull-right" style="margin-bottom:20px;">Read More</button>
                                 </div><?php } ?>
                                 <div class="col-lg-2">
-                                   
+
                                 </div>
                                 <div class="col-lg-4" style="border:#fff solid 1px;">
                                  <p style=" margin-left:-10px; margin-top:10px;">you'll have 4 sidebar Ads included + a lot more</p>
@@ -829,20 +829,20 @@ if ($static['status']=='Pro Membership' )
                                     </div>
                               </div><?php } ?>
                             </div>
-                          </div> <br>     
-                            
-                            
+                          </div> <br>
+
+
                         </div>
                     </div>
                  </div>
                  <div class="col-lg-12">
-                  <p  style="margin-left:30px; margin-top:30px;"> by posting this Ad,you are agreeing with our terms and conditions</p>                    <?php 
+                  <p  style="margin-left:30px; margin-top:30px;"> by posting this Ad,you are agreeing with our terms and conditions</p>                    <?php
 if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership') { } else {?> <p>Total:&nbsp;$ <input type="text" name="total" value="0" style="border:none; background:#e2e2e2;"> </p><?php } ?>
-                  <input type="submit" class="btn btn btn-primary pull-right btn6" value="Post Your Ad">  
+                  <input type="submit" class="btn btn btn-primary pull-right btn6" value="Post Your Ad">
                  </div>
                 </div>
                  </form>
-             <?php 
-      
+             <?php
+
              include('footer.php');
              ?>

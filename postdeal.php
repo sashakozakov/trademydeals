@@ -170,11 +170,11 @@ if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership')
                                     <h4>Deal Details</h4>
                                 </div>
                                 <div class="deals_form">
-                                    <div class="col-lg-12" style="margin-top:20px;">
-                                        <div class="col-lg-3">
+                                    <div class="col-lg-12 reg-nopad" style="margin-top:20px;">
+                                        <div class="col-lg-3 reg-nopad">
                                             <p>Category<i style="margin-left:10px; color:#CC0000;">*</i></p>
                                         </div>
-                                        <div class="col-lg-7">
+                                        <div class="col-lg-7 reg-nopad">
                                             <select id="category" name="category" onchange="update_subcategory(this.value,1)">
                                                 <option value="0">-Select Category-</option>
                                                 <?php $q = "SELECT DISTINCT sub_menu_category,main_menu_id
@@ -189,20 +189,20 @@ if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership')
                                         </div>
 
                                     </div>
-                                    <div class="col-lg-12" style="margin-top:20px;margin-bottom:20px;">
-                                        <div class="col-lg-3">
+                                    <div class="col-lg-12 reg-nopad" style="margin-top:20px;margin-bottom:20px;">
+                                        <div class="col-lg-3 reg-nopad">
                                             <p>Sub-Category<i style="margin-left:10px; color:#CC0000;">*</i></p>
                                         </div>
-                                        <div class="col-lg-7">
+                                        <div class="col-lg-7 reg-nopad">
                                             <select id="sub-category" name="sub-category"></select>
                                         </div>
 
                                     </div>
-                                    <div class="col-lg-12">
-                                        <div class="col-lg-3">
+                                    <div class="col-lg-12 reg-nopad">
+                                        <div class="col-lg-3 reg-nopad">
                                             <p>Deal Title<i style="margin-left:10px; color:#CC0000;">*</i></p>
                                         </div>
-                                        <div class="col-lg-7">
+                                        <div class="col-lg-7 reg-nopad">
                                             <input name="title" id="title" type="text" class="form-control">
                                             <input type="hidden" name="action" value="process" />
                                             <input name="user_id" type="hidden" value="<?php echo $user_id; ?>">
@@ -210,27 +210,27 @@ if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership')
                                             <input type="hidden" name="cmd" value="_cart" /> <?php // use _cart for cart checkout ?>
                                             <input type="hidden" name="currency_code" value="USD" />
                                         </div>
-                                        <div class="col-lg-2">
+                                        <div class="col-lg-2 reg-nopad">
                                         </div>
                                     </div>
-                                    <div class="col-lg-12" style="margin-top:20px;">
-                                        <div class="col-lg-3">
+                                    <div class="col-lg-12 reg-nopad" style="margin-top:20px;">
+                                        <div class="col-lg-3 reg-nopad">
                                             <p>Company Name</p>
                                         </div>
-                                        <div class="col-lg-7">
+                                        <div class="col-lg-7 reg-nopad">
                                             <input name="company" type="text" class="form-control">
                                         </div>
-                                        <div class="col-lg-2">
+                                        <div class="col-lg-2 reg-nopad">
                                         </div>
                                     </div>
-                                    <div class="col-lg-12" style="margin-top:20px;">
-                                        <div class="col-lg-3">
+                                    <div class="col-lg-12 reg-nopad" style="margin-top:20px;">
+                                        <div class="col-lg-3 reg-nopad">
                                             <p> Deal Description<i style="margin-left:10px; color:#CC0000;">*</i></p>
                                         </div>
-                                        <div class="col-lg-8">
+                                        <div class="col-lg-8 reg-nopad">
                                             <textarea name="description" id="description" class="form-control"></textarea>
                                         </div>
-                                        <div class="col-lg-1">
+                                        <div class="col-lg-1 reg-nopad">
                                         </div>
                                     </div>
 
@@ -247,54 +247,54 @@ if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership')
                                     <h4>Deals Location</h4>
                                 </div>
                                 <div class="deals_form">
-                                    <div class="col-lg-12">
-                                        <div class="col-lg-3">
+                                    <div class="col-lg-12 reg-nopad">
+                                        <div class="col-lg-3 reg-nopad">
                                             <p>Country<i style="margin-left:10px; color:#CC0000;">*</i></p>
                                         </div>
-                                        <div class="col-lg-5">
+                                        <div class="col-lg-5 reg-nopad">
                                             <select class="form-control" id="country" name ="country"></select>
                                         </div>
-                                        <div class="col-lg-4">
+                                        <div class="col-lg-4 reg-nopad">
                                         </div>
                                     </div>
-                                    <div class="col-lg-12" style="margin-top:20px;">
-                                        <div class="col-lg-3">
+                                    <div class="col-lg-12 reg-nopad" style="margin-top:20px;">
+                                        <div class="col-lg-3 reg-nopad">
                                             <p>State<i style="margin-left:10px; color:#CC0000;">*</i></p>
                                         </div>
-                                        <div class="col-lg-5">
+                                        <div class="col-lg-5 reg-nopad">
                                             <select class="form-control" name ="state" id ="state"></select>
                                         </div>
-                                        <div class="col-lg-4">
+                                        <div class="col-lg-4 reg-nopad">
                                         </div>
                                     </div>
-                                    <div class="col-lg-12" style="margin-top:20px;">
-                                        <div class="col-lg-3">
+                                    <div class="col-lg-12 reg-nopad" style="margin-top:20px;">
+                                        <div class="col-lg-3 reg-nopad">
                                             <p>City<i style="margin-left:10px; color:#CC0000;">*</i></p>
                                         </div>
-                                        <div class="col-lg-7">
+                                        <div class="col-lg-7 reg-nopad">
                                             <input name="city" type="text" class="form-control">
                                         </div>
-                                        <div class="col-lg-2">
+                                        <div class="col-lg-2 reg-nopad">
                                         </div>
                                     </div>
-                                    <div class="col-lg-12" style="margin-top:20px;">
-                                        <div class="col-lg-3">
+                                    <div class="col-lg-12 reg-nopad" style="margin-top:20px;">
+                                        <div class="col-lg-3 reg-nopad">
                                             <p>Postal code<i style="margin-left:10px; color:#CC0000;">*</i></p>
                                         </div>
-                                        <div class="col-lg-7">
+                                        <div class="col-lg-7 reg-nopad">
                                             <input name="postalcode" type="text" class="form-control">
                                         </div>
-                                        <div class="col-lg-2">
+                                        <div class="col-lg-2 reg-nopad">
                                         </div>
                                     </div>
-                                    <div class="col-lg-12" style="margin-top:20px;">
-                                        <div class="col-lg-3">
+                                    <div class="col-lg-12 reg-nopad" style="margin-top:20px;">
+                                        <div class="col-lg-3 reg-nopad">
                                             <p>Expiration Date</p>
                                         </div>
-                                        <div class="col-lg-7">
+                                        <div class="col-lg-7 reg-nopad">
                                             <input name="expire" type="text"  id="datepicker">
                                         </div>
-                                        <div class="col-lg-2">
+                                        <div class="col-lg-2 reg-nopad">
                                         </div>
                                     </div>
 
@@ -313,27 +313,27 @@ if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership')
                                 <div class="deals_form">
 
 
-                                    <div class="col-lg-12" style="margin-top:20px;">
-                                        <div class="col-lg-3">  <span class="country_code"></span>
+                                    <div class="col-lg-12 reg-nopad" style="margin-top:20px;">
+                                        <div class="col-lg-3 reg-nopad">  <span class="country_code"></span>
                                             <p>Phone</p>
                                         </div>
-                                        <div class="col-lg-7">
+                                        <div class="col-lg-7 reg-nopad">
 
                                             <input name="current_city" type="text" class="form-control" id="phone">
                                             <p style="margin:5px 0 0"><input type="checkbox" value="1" id="share_phone" name="share_phone" /> Share my phone number with others</p>
                                         </div>
-                                        <div class="col-lg-2">
+                                        <div class="col-lg-2 reg-nopad">
                                         </div>
                                     </div>
-                                    <div class="col-lg-12" style="margin-top:20px;">
-                                        <div class="col-lg-3">
+                                    <div class="col-lg-12 reg-nopad" style="margin-top:20px;">
+                                        <div class="col-lg-3 reg-nopad">
                                             <p>Email<i style="margin-left:10px; color:#CC0000;">*</i></p>
                                         </div>
-                                        <div class="col-lg-7">
+                                        <div class="col-lg-7 reg-nopad">
                                             <input name="current_postalcode" type="text" class="form-control">
                                             <p style="margin:5px 0 0"><input type="checkbox" value="1" id="share_email" name="share_email" /> Share my email with others</p>
                                         </div>
-                                        <div class="col-lg-2">
+                                        <div class="col-lg-2 reg-nopad">
                                         </div>
                                     </div>
 
@@ -410,10 +410,10 @@ if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership')
                                             <br><br><strong>Images should be of size 6000*4000 or Max file size 4MB. Limit 5 images. Extra images will be charged $1 each</strong>
                                         </div>
                                         <div class="col-lg-8">
-                                         
+
 
                                                 <input type="file" id="file" name="file2" class="btn btn btn-primary btn6" value="Post Your Deal" accept="image/x-png, image/gif, image/jpeg"/><br />
-									   
+
 									   <span class="upload-btn btn-successs fileinput-button">
 											<i class="glyphicon glyphicon-plus"></i>
 											<span>Select image</span>
@@ -428,7 +428,7 @@ if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership')
                                                 </div>
 
                                                 <div id="files" onchange="" class="files"></div>
-                                  
+
                                         </div>
                                         <div class="col-lg-7">
                                         </div>
@@ -718,11 +718,11 @@ if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership')
                                 <p style=" margin-left:-20px; margin-top:5px;">Become a member:</p>
                                 </div>
                                 <div class="col-lg-6">
-                                
+
                                 </div>
-                              
+
                             </div>
-							
+
 							<div class="deals_work7">
                              <div class="col-lg-12"> <?php
                                             if ($static['status']=='Pro Membership' )
@@ -733,12 +733,12 @@ if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership')
                               <div class="col-lg-1">
                                     <input type="radio" name="membership" value="50"  onClick="checksubtotal(this.value)">
                                 </div>
-                                
+
                                 <div class="col-lg-2">
                                 <p style=" margin-left:-20px; margin-top:10px;">pro member -$50per month</p>
                                 </div><?php } ?>
                                 <div class="col-lg-2">
-                                
+
                                 </div>
                                 <div class="col-lg-1">
                                     <input type="radio"  name="membership" value="80"  onClick="checksubtotal(this.value)">
@@ -747,9 +747,9 @@ if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership')
                                 <p style=" margin-left:-20px; margin-top:10px;">Gold member -$80per month</p>
                                 </div>
                                 <div class="col-lg-3">
-                                
+
                                 </div>
-                              
+
                             </div>
                             <div class="col-lg-12"> <?php
                                             if ($static['status']=='Pro Membership' )
@@ -758,21 +758,21 @@ if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership')
                                             else {  ?>
                               <div class="col-lg-2"></div>
                               <div class="col-lg-4" style="border:#fff solid 1px;">
-                                
+
                                 <p style=" margin-top:10px;">you'll have 5 highlighted Deals included + more</p>
                                   <button type="button" class="btn btn-sm btn-warning pull-right" style="margin-bottom:20px;">Read More</button>
                                 </div><?php } ?>
                                 <div class="col-lg-2">
-                                   
+
                                 </div>
                                 <div class="col-lg-4" style="border:#fff solid 1px;">
                                  <p style=" margin-left:-10px; margin-top:10px;">you'll have 10 highlighted Deals included + a lot more</p>
                                  <button type="button" class="btn btn-sm btn-warning pull-right" style="margin-bottom:20px;">Read More</button>
                                 </div>
                                 <div class="col-lg-1">
-                                
+
                                 </div>
-                              
+
                             </div>-->
                                             </div><?php } ?>
 
@@ -830,9 +830,9 @@ if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership')
                                 <p style=" margin-left:-20px; margin-top:5px;">Become a member:</p>
                                 </div>
                                 <div class="col-lg-6">
-                                
+
                                 </div>
-                              
+
                             </div><?php } ?><div class="deals_work8">
                              <div class="col-lg-12"> <?php
                                             if ($static['status']=='Pro Membership' )
@@ -843,12 +843,12 @@ if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership')
                               <div class="col-lg-1">
                                     <input type="radio" name="member1" value="50" onClick="checksubtotal(this.value)">
                                 </div>
-                                
+
                                 <div class="col-lg-2">
                                 <p style=" margin-left:-20px; margin-top:10px;">pro member -$50 per month</p>
                                 </div><?php } ?>
                                 <div class="col-lg-2">
-                                
+
                                 </div>
                                 <div class="col-lg-1">
                                     <input type="radio"  name="member1" value="80" onClick="checksubtotal(this.value)">
@@ -857,9 +857,9 @@ if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership')
                                 <p style=" margin-left:-20px; margin-top:10px;">Gold member -$80 per month</p>
                                 </div>
                                 <div class="col-lg-3">
-                                
+
                                 </div>
-                              
+
                             </div>
                             <div class="col-lg-12"> <?php
                                             if ($static['status']=='Pro Membership' )
@@ -868,19 +868,19 @@ if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership')
                                             else {  ?>
                               <div class="col-lg-2"></div>
                               <div class="col-lg-4" style="border:#fff solid 1px;">
-                                
+
                                 <p style=" margin-top:10px;">you'll have 3 top Deals included + more </p>
                                   <button type="button" class="btn btn-sm btn-warning pull-right" style="margin-bottom:20px;">Read More</button>
                                 </div><?php } ?>
                                 <div class="col-lg-2">
-                                   
+
                                 </div>
                                 <div class="col-lg-4" style="border:#fff solid 1px;">
                                  <p style=" margin-left:-10px; margin-top:10px;">you'll have 6 top Deals included + a lot more</p>
                                  <button type="button" class="btn btn-sm btn-warning pull-right" style="margin-bottom:20px;">Read More</button>
                                 </div>
                                 <div class="col-lg-1">
-                                
+
                                 </div>
                               </div>  -->
 
@@ -941,9 +941,9 @@ if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership')
                                 <p style=" margin-left:-20px; margin-top:5px;">Become a member:</p>
                                 </div>
                                 <div class="col-lg-6">
-                                
+
                                 </div>
-                              
+
                             </div><?php } ?>
               <div class="deals_work9">
                              <div class="col-lg-12"> <?php
@@ -955,12 +955,12 @@ if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership')
                               <div class="col-lg-1">
                                     <input type="radio" name="membership_home" value="50" onClick="checksubtotal(this.value)">
                                 </div>
-                                
+
                                 <div class="col-lg-2">
                                 <p style=" margin-left:-20px; margin-top:10px;">pro member -$50 per month</p>
                                 </div><?php } ?>
                                 <div class="col-lg-2">
-                                
+
                                 </div>
                                 <div class="col-lg-1">
                                     <input type="radio"  name="membership_home" value="80" onClick="checksubtotal(this.value)">
@@ -969,9 +969,9 @@ if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership')
                                 <p style=" margin-left:-20px; margin-top:10px;">Gold member -$80 per month</p>
                                 </div>
                                 <div class="col-lg-3">
-                                
+
                                 </div>
-                              
+
                             </div>
                             <div class="col-lg-12"> <?php
                                             if ($static['status']=='Pro Membership' )
@@ -980,19 +980,19 @@ if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership')
                                             else {  ?>
                               <div class="col-lg-2"></div>
                               <div class="col-lg-4" style="border:#fff solid 1px;">
-                                
+
                                 <p style=" margin-top:10px;">you'll have 5 home page Deals included + more </p>
                                   <button type="button" class="btn btn-sm btn-warning pull-right" style="margin-bottom:20px;">Read More</button>
                                 </div><?php } ?>
                                 <div class="col-lg-2">
-                                   
+
                                 </div>
                                 <div class="col-lg-4" style="border:#fff solid 1px;">
                                  <p style=" margin-left:-10px; margin-top:10px;">you'll have 10 home page Deals included + a lot more</p>
                                  <button type="button" class="btn btn-sm btn-warning pull-right" style="margin-bottom:20px;">Read More</button>
                                 </div>
                                 <div class="col-lg-1">
-                                
+
                                 </div>
                               </div>
 							  -->
@@ -1053,9 +1053,9 @@ if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership')
                                 <p style=" margin-left:-20px; margin-top:5px;">Become a member:</p>
                                 </div>
                                 <div class="col-lg-6">
-                                
+
                                 </div>
-                              
+
                             </div><?php } ?><div class="deals_work10">
                              <div class="col-lg-12"> <?php
                                             if ($static['status']=='Pro Membership' )
@@ -1066,12 +1066,12 @@ if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership')
                               <div class="col-lg-1">
                                     <input type="radio" name="membership_sidebar" value="50" onClick="checksubtotal(this.value)">
                                 </div>
-                                
+
                                 <div class="col-lg-2">
                                 <p style=" margin-left:-20px; margin-top:10px;">pro member -$50 per month</p>
                                 </div><?php } ?>
                                 <div class="col-lg-2">
-                                
+
                                 </div>
                                 <div class="col-lg-1">
                                     <input type="radio"  name="membership_sidebar" value="80" onClick="checksubtotal(this.value)">
@@ -1080,9 +1080,9 @@ if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership')
                                 <p style=" margin-left:-20px; margin-top:10px;">Gold member -$80 per month</p>
                                 </div>
                                 <div class="col-lg-3">
-                                
+
                                 </div>
-                              
+
                             </div>
                             <div class="col-lg-12"> <?php
                                             if ($static['status']=='Pro Membership' )
@@ -1091,19 +1091,19 @@ if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership')
                                             else {  ?>
                               <div class="col-lg-2"></div>
                               <div class="col-lg-4" style="border:#fff solid 1px;">
-                                
+
                                 <p style=" margin-top:10px;">you'll have 2 sidebar Deals included + more</p>
                                   <button type="button" class="btn btn-sm btn-warning pull-right" style="margin-bottom:20px;">Read More</button>
                                 </div><?php } ?>
                                 <div class="col-lg-2">
-                                   
+
                                 </div>
                                 <div class="col-lg-4" style="border:#fff solid 1px;">
                                  <p style=" margin-left:-10px; margin-top:10px;">you'll have 4 sidebar Deals included + a lot more</p>
                                  <button type="button" class="btn btn-sm btn-warning pull-right" style="margin-bottom:20px;">Read More</button>
                                 </div>
                                 <div class="col-lg-1">
-                                
+
                                 </div>
                               </div>--><?php } ?>
                                         </div>
@@ -1159,9 +1159,9 @@ if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership')
                                 <p style=" margin-left:-20px; margin-top:5px;">Become a member:</p>
                                 </div>
                                 <div class="col-lg-6">
-                                
+
                                 </div>
-                              
+
                             </div><?php } ?> <div class="deals_work11">
                              <div class="col-lg-12"> <?php
                                             if ($static['status']=='Pro Membership' )
@@ -1172,12 +1172,12 @@ if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership')
                               <div class="col-lg-1">
                                     <input type="radio" class="click11" name="membership_topfeature" value="50" onClick="checksubtotal(this.value)">
                                 </div>
-                                
+
                                 <div class="col-lg-2">
                                 <p style=" margin-left:-20px; margin-top:10px;">Upgrade Pro Membership</p>
                                 </div><?php } ?>
                                 <div class="col-lg-2">
-                                
+
                                 </div>
                                 <div class="col-lg-1">
                                     <input type="radio"  name="membership_topfeature" value="80" onClick="checksubtotal(this.value)">
@@ -1186,11 +1186,11 @@ if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership')
                                 <p style=" margin-left:-20px; margin-top:10px;">Upgrade Gold Membership</p>
                                 </div>
                                 <div class="col-lg-3">
-                                
+
                                 </div>
-                              
+
                             </div>
-            
+
                             <div class="col-lg-12"> <?php
                                             if ($static['status']=='Pro Membership' )
 
@@ -1198,12 +1198,12 @@ if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership')
                                             else {  ?>
                               <div class="col-lg-2"></div>
                               <div class="col-lg-4" style="border:#fff solid 1px;">
-                                
+
                                 <p style=" margin-top:10px;">you'll have 4 sidebar Deals included + a lot more</p>
                                   <button type="button" class="btn btn-sm btn-warning pull-right" style="margin-bottom:20px;">Read More</button>
                                 </div><?php } ?>
                                 <div class="col-lg-2">
-                                   
+
                                 </div>
                                 <div class="col-lg-4" style="border:#fff solid 1px;">
                                  <p style=" margin-left:-10px; margin-top:10px;">you'll have 4 sidebar Deals included + a lot more</p>

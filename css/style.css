@@ -548,6 +548,9 @@ li.dropdown-submenu1:hover ul{
 	padding: 0;
 	text-align: center;
 }
+.aisdeslider li {
+	list-style: none;
+}
 .col-lg-3 .bx-prev{
 	top: 17px !important;
 	left: 40% !important;;

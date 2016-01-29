@@ -21,11 +21,11 @@ $amount = $_GET['amount'];
                                  action="signup_new.php"
                                 method="post">
                                 <div class="deals_form">
-                                    <div class="col-lg-12">
-                                        <div class="col-lg-3">
+                                    <div class="col-lg-12 reg-nopad">
+                                        <div class="col-lg-3 reg-nopad">
                                             <p>Email Address:<i style="margin-left:10px; color:#CC0000;">*</i></p>
                                         </div>
-                                        <div class="col-lg-7">
+                                        <div class="col-lg-7 reg-nopad">
                                             <input required type="text" name="email" class="form-control">
                                             <input type="hidden" name="membership" value="<?php echo $membership; ?>">
                                             <input type="hidden" name="amount" value="<?php echo $amount; ?>">
@@ -33,48 +33,49 @@ $amount = $_GET['amount'];
                                         <div class="col-lg-2">
                                         </div>
                                     </div>
-                                    <div class="col-lg-12" style="margin-top:20px;">
-                                        <div class="col-lg-3">
+                                    <div class="col-lg-12 reg-nopad" style="margin-top:20px;">
+                                        <div class="col-lg-3 reg-nopad">
                                             <p>Password(atleast 6 Characters):<i
                                                     style="margin-left:10px; color:#CC0000;">*</i></p>
                                         </div>
-                                        <div class="col-lg-7">
+                                        <div class="col-lg-7 reg-nopad">
                                             <input required type="password" name="password" class="form-control">
                                         </div>
-                                        <div class="col-lg-2">
+                                        <div class="col-lg-2 reg-nopad">
                                         </div>
                                     </div>
-                                    <div class="col-lg-12" style="margin-top:20px;">
-                                        <div class="col-lg-3">
+                                    <div class="col-lg-12 reg-nopad" style="margin-top:20px;">
+                                        <div class="col-lg-3 reg-nopad">
                                             <p>Re-type password:<i style="margin-left:10px; color:#CC0000;">*</i></p>
                                         </div>
-                                        <div class="col-lg-7">
+                                        <div class="col-lg-7 reg-nopad">
                                             <input required type="password" name="repassword" class="form-control">
                                         </div>
-                                        <div class="col-lg-2">
+                                        <div class="col-lg-2 reg-nopad">
                                         </div>
                                     </div>
 
-                                    <div class="col-lg-12" style="margin-top:20px;">
-                                        <div class="col-lg-3">
+                                    <div class="col-lg-12 reg-nopad" style="margin-top:20px;">
+                                        <div class="col-lg-3 reg-nopad">
                                             <p>Nickname(optional):<i style="margin-left:10px; color:#CC0000;">*</i></p>
                                         </div>
-                                        <div class="col-lg-7">
+                                        <div class="col-lg-7 reg-nopad">
                                             <input type="text" name="nickname" class="form-control">
                                         </div>
-                                        <div class="col-lg-2">
+                                        <div class="col-lg-2 reg-nopad">
                                         </div>
                                     </div>
-                                    <div class="col-lg-12" style="margin-top:20px;">
+                                    <div class="col-lg-12 reg-nopad" style="margin-top:20px;">
                                         <div class="col-lg-3">
                                         </div>
-                                        <div class="col-lg-7">
-                                        <div class="g-recaptcha" data-sitekey="6LdefRETAAAAAL8kSwswVXiLbOECQ1rdGVTj4-O2"></div>
+                                        <div class="col-lg-7 capcha-signup reg-nopad">
+                                        <!-- <div class="g-recaptcha" data-sitekey="6LdefRETAAAAAL8kSwswVXiLbOECQ1rdGVTj4-O2"></div> -->
+                                        <iframe src="https://www.google.com/recaptcha/api2/anchor?k=6LdefRETAAAAAL8kSwswVXiLbOECQ1rdGVTj4-O2&amp;co=aHR0cDovL2xvY2FsaG9zdDo4MA..&amp;hl=en&amp;v=r20160127172231&amp;size=normal&amp;cb=3du4raj5smnu" title="recaptcha widget" role="presentation" frameborder="0" scrolling="no"></iframe>
                                         </div>
                                     </div>
                                     <div class="col-lg-12" style="margin-top:20px;">
                                         <div class="col-lg-3"><p style="margin-left:30px; margin-top:30px;"></p></div>
-                                        <div class="col-lg-7">
+                                        <div class="col-lg-7 post-btn register-btn">
                                             <input type="submit" class="btn btn btn-primary pull-right btn6"
                                                    style="border-top-left-radius:10px; border-top-right-radius:10px;border-bottom-left-radius:10px; padding:12px 28px; border-bottom-right-radius:10px;"
                                                    value="Register"/>

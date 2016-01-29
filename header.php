@@ -21,7 +21,7 @@ require_once('geoplugin.class.php');
 $geoplugin = new geoPlugin();
 
 $geoplugin->locate();
-//echo $geoplugin->countryName." ".$geoplugin->countryCode; 
+//echo $geoplugin->countryName." ".$geoplugin->countryCode;
 //$ip = $_SERVER['REMOTE_ADDR'];
 //$details = json_decode(file_get_contents("http://ipinfo.io/{$ip}"));
 //$country = $details->country; // -> "US"
@@ -36,6 +36,7 @@ $geoplugin->locate();
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/media.css" rel="stylesheet">
     <link href="css/font-awesome.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
@@ -658,7 +659,7 @@ $geoplugin->locate();
 <div class="header">
     <div class="container">
         <div class="col-md-12 col-lg-12">
-            <div class="col-xs-6 col-md-3 col-lg-3">
+            <div class="col-xs-6 col-md-3 col-lg-3 social-btns">
                 <li><a href="https://www.facebook.com/trademydealsinternational/?ref=hl" target="_blank"><img src="images/1.png"></a></li>
                 <li><a href="https://plus.google.com/u/0/107279557881407049137" target="_blank"><img src="images/2.png"></a></li>
                 <!--li><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://bluewhalesolutions.com/D/trademydeals/" target="_blank"><img src="images/3.png"></a></li-->
@@ -669,7 +670,7 @@ $geoplugin->locate();
             </div>
 
 
-            <div class="col-xs-6 col-md-3 col-lg-3">
+            <div class="col-xs-8 col-md-3 col-lg-3 ads-btns">
                 <ul class="list-inline">
                     <li><a href="postad.php" class="btn btn-sm btn-success btn1">Post Ad Free</a></li>
                     <li><a href="postdeal.php" class="btn btn-sm btn-success btn2">Post Deal</a></li>
@@ -684,7 +685,7 @@ $geoplugin->locate();
             {?><!--<div class="col-lg-2">
                   <a href="membershipuser.php"><p><?php echo $users ?></p></a>
                   </div>-->
-            <div class="col-xs-4 col-md-2 col-lg-2">
+            <div class="col-xs-4 col-md-2 col-lg-2 header-signup">
                 <ul class="list-inline pull-right">
                     <li><a href="dashboard.php">My Account</a></li>
                     <li>&nbsp;<span style="color:#FFF;">|</span>&nbsp;</li>
@@ -692,7 +693,7 @@ $geoplugin->locate();
                 </ul>
             </div>
             <?php } else { ?>
-                <div class="col-xs-4 col-md-3 col-lg-3">
+                <div class="col-xs-4 col-md-3 col-lg-3 header-signup">
                     <ul class="list-inline">
                         <li><a href="signin.php">Log-in</a></li>
                         <li>&nbsp;<span style="color:#FFF;">|</span>&nbsp;</li>
@@ -701,7 +702,7 @@ $geoplugin->locate();
                 </div>
             <?php } ?>
 
-            <div class="col-xs-8 col-md-3 col-lg-3">
+            <div class="col-xs-8 col-md-3 col-lg-3 def_location">
                 <?php
                 if(isset($_COOKIE['def_country_code']) && $_COOKIE['def_country_code'] != ''){
                     $def_country = $_COOKIE['def_country'];
@@ -761,7 +762,7 @@ $geoplugin->locate();
         </div>
 
         <div class="col-md-12 col-lg-11">
-            <form action="search.php" name="searchincat" id="searchincat" method="get" style="float:right;">
+            <form action="search.php" class="search-form" name="searchincat" id="searchincat" method="get" style="float:right;">
                 <select name="search_category" id="search_category">
                     <option value="ads">Ads</option>
                     <option value="deals">Deals</option>

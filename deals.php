@@ -14,14 +14,14 @@ include('header.php');
   <div class="content">
     <div class="container">
      <div class="col-lg-12">
-        <div class="col-lg-9">
+        <div class="col-lg-9 mobile-nopad">
             	<div class="col-lg-12">
                 	<div class="col-lg-10">
                 	<div class="sub1" style="margin-top:20px; margin-bottom:15px; margin-left:-5px;">
                     	<h4>Deals</h4>
                     </div>
                     </div>
-                     <div class="col-lg-2" style="margin-top:20px;">
+                     <div class="col-lg-2 post-btn" style="margin-top:20px;">
          <a href="postdeal.php"><button type="button" class="btn btn-danger btn-lg" style="border-top-left-radius:10px;
 border-top-right-radius:10px;border-bottom-left-radius:10px; padding:8px 16px;
 border-bottom-right-radius:10px; margin-left:10px;">Post Deal</button></a>
@@ -168,67 +168,67 @@ while ($row= mysql_fetch_object($sql)) {
 
                     </div>
             </div>
-             <div class="col-lg-12" style="display:<?php echo $none_all_ads;?>;">
-                	<?php 
- 
+             <div class="col-lg-12 media-pagination" style="display:<?php echo $none_all_ads;?>;">
+                	<?php
 
 
 
-// control query------------------------------ 
-/* this query checks how many records you have in your table. 
-I created this query so we could be able to check if user is 
-trying to append number larger than the number of records 
-to the query string.*/ 
-$off_sql = mysql_query ("$query") or die ("Error in query: $off_sql".mysql_error()); 
-$off_pag = ceil (mysql_num_rows($off_sql) / $nol); 
-//-------------------------------------------- 
-$off=isset($_GET['offset'])? $_GET['offset']:''; 
- 
-//paranoid 
-if (get_magic_quotes_gpc() == 0) { 
-$off = addslashes ($off); 
-} 
-if (!is_numeric ($off)) { 
-$off = 1; 
-} 
-// this checks if user is trying to put something stupid in query string 
-if ($off > $off_pag) { 
-$off = 1; 
-} 
 
-if ($off == "1") { 
-$limit = "0, $nol"; 
-} 
-elseif ($off <> "") { 
-for ($i = 0; $i <= ($off - 1) * $nol; $i ++) { 
-$limit = "$i, $nol"; 
-$count = $i + 1; 
-} 
+// control query------------------------------
+/* this query checks how many records you have in your table.
+I created this query so we could be able to check if user is
+trying to append number larger than the number of records
+to the query string.*/
+$off_sql = mysql_query ("$query") or die ("Error in query: $off_sql".mysql_error());
+$off_pag = ceil (mysql_num_rows($off_sql) / $nol);
+//--------------------------------------------
+$off=isset($_GET['offset'])? $_GET['offset']:'';
+
+//paranoid
+if (get_magic_quotes_gpc() == 0) {
+$off = addslashes ($off);
+}
+if (!is_numeric ($off)) {
+$off = 1;
+}
+// this checks if user is trying to put something stupid in query string
+if ($off > $off_pag) {
+$off = 1;
+}
+
+if ($off == "1") {
+$limit = "0, $nol";
+}
+elseif ($off <> "") {
+for ($i = 0; $i <= ($off - 1) * $nol; $i ++) {
+$limit = "$i, $nol";
+$count = $i + 1;
+}
 } ?>
 
                       <ul class="pagination">
-                    <?php  if ($off <> 1) { 
-$prev = $off - 1; 
+                    <?php  if ($off <> 1) {
+$prev = $off - 1;
                           echo "<li ><a  href=\"$filename?offset=$prev&go=$go\">&laquo;</a></li>";
-                          } 
-for ($i = 1; $i <= $off_pag; $i ++) { 
+                          }
+for ($i = 1; $i <= $off_pag; $i ++) {
 if ($i == $off) { ?>
-                   <li  class="active"><a href="#"><?php echo $i;?></a></li> 
-                  <?php  } else { 
-     
+                   <li  class="active"><a href="#"><?php echo $i;?></a></li>
+                  <?php  } else {
+
                          echo " <li ><a  href=\"$filename?offset=$i&go=$go\">$i</a></li> ";
-                        } 
-} 
-if ($off < $off_pag) { 
-$next = $off + 1; 
+                        }
+}
+if ($off < $off_pag) {
+$next = $off + 1;
                           echo "<li><a href=\"$filename?offset=$next&go=$go\">&raquo;</a></li>";
                           } ?>
 
 						</ul>
                     </div>
                 </div>
-           
-  
-                                 <?php 
+
+
+                                 <?php
 include('footer.php');
                 ?>

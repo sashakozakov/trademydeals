@@ -13,7 +13,7 @@ function checkFlyer()
 	var form = document.listForm;
 	var re = /\S+@\S+\.\S+/;
 	var email = form.current_postalcode.value;
-	
+
 	if(form.title.value == '')
 	{
 		alert('Please Enter Deal Title Name');
@@ -21,23 +21,23 @@ function checkFlyer()
 		form.title.focus();
 		return false;
 	}
-	
+
 	if(form.description.value == '')
 	{
 	    alert('Please Enter Deal Description');
 		form.description.select();
 		form.description.focus();
-		return false; 	
+		return false;
 	}
-	
+
 	if(form.country.value == -1)
 	{
 		alert('Please Select Country from dropdown');
 		form.description.select();
 		form.description.focus();
-		return false; 	
+		return false;
 	}
-	
+
 	if(form.state.value == '' || form.state.value == -1)
 	{
 		alert('Please Select State from dropdown');
@@ -45,7 +45,7 @@ function checkFlyer()
 		form.state.focus();
 		return false;
 	}
-	
+
 	if(form.city.value == '' && form.postalcode.value == '')
 	{
 		alert('At least one of Postal code and City text fields should not be empty.');
@@ -59,15 +59,15 @@ function checkFlyer()
 		}
 		return false;
 	}
-	
+
 	if(form.current_city.value == '')
 	{
 		/*alert('Please Enter Phone number');
 		form.current_city.select();
 		form.current_city.focus();
 		return false;*/
-	}	
-	
+	}
+
 	if(form.current_postalcode.value == '')
 	{
 		alert('Please Enter Email Address');
@@ -75,7 +75,7 @@ function checkFlyer()
 		form.current_postalcode.focus();
 		return false;
 	}
-	
+
 	if(!re.test(email))
 	{
 		alert('Please Enter Valide Email Address');
@@ -83,19 +83,19 @@ function checkFlyer()
 		form.current_postalcode.focus();
 		return false;
 	}
-	
+
 	/*if(form.regular[0].checked == false && form.regular[1].checked == false && form.regular[2].checked == false)
 	{
 		alert('Please Select Deal Publishing Plan');
 		return false;
-	}*/	
-	
+	}*/
+
 	return true;
-}	
+}
 </script>
  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-  
+
   <script>
   $(document).ready(function() {
 	  dateToday = new Date();
@@ -103,7 +103,7 @@ function checkFlyer()
   });
     function update_subcategory(id,main_menu_id)
   {
-  
+
 	$.ajax({
     url: "ajax-get-subcat.php",
     type:"POST",
@@ -114,16 +114,16 @@ function checkFlyer()
       $("#sub-category").html(data);
       }
     });
-	
+
   }
   </script>
         <!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
 <link rel="stylesheet" href="juploader/css/jquery.fileupload.css">
-   <?php 
+   <?php
 if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership') { ?>
 <form action="flyers_process.php" method="post" enctype="multipart/form-data" name="listForm" >
-<?php 
-} 
+<?php
+}
 else{ ?>
   <form action="paypal2/paypal3.php" method="post" enctype="multipart/form-data" name="listForm" id="listForm" onsubmit="return checkFlyer();" >
 <?php
@@ -140,14 +140,14 @@ else{ ?>
                           <h4>Flyer Details</h4>
                         </div>
                         <div class="deals_form">
-							<div class="col-lg-12" style="margin-top:20px;">
-                                <div class="col-lg-3">
+							<div class="col-lg-12 reg-nopad" style="margin-top:20px;">
+                                <div class="col-lg-3 reg-nopad">
                                     <p>Category<i style="margin-left:10px; color:#CC0000;">*</i></p>
                                 </div>
-                                <div class="col-lg-7">
+                                <div class="col-lg-7 reg-nopad">
                                       <select id="category" name="category" onchange="update_subcategory(this.value,4)">
 									  <option value="0">-Select Category-</option>
-									  <?php $q = "SELECT DISTINCT sub_menu_category,main_menu_id 
+									  <?php $q = "SELECT DISTINCT sub_menu_category,main_menu_id
 													FROM  `tbl_sub_menu` where main_menu_id ='4' ";
 										$sql=  mysql_query($q);
                       while ($row = mysql_fetch_array($sql)) {?>
@@ -157,22 +157,22 @@ else{ ?>
                       ?>
 									  </select>
                                 </div>
-                                
+
                             </div>
-							<div class="col-lg-12" style="margin-top:20px;margin-bottom:20px;">
-                                <div class="col-lg-3">
+							<div class="col-lg-12 reg-nopad" style="margin-top:20px;margin-bottom:20px;">
+                                <div class="col-lg-3 reg-nopad">
                                     <p>Sub-Category<i style="margin-left:10px; color:#CC0000;">*</i></p>
                                 </div>
-                                <div class="col-lg-7">
+                                <div class="col-lg-7 reg-nopad">
                                       <select id="sub-category" name="sub-category"></select>
                                 </div>
-                                
+
                             </div>
-                          <div class="col-lg-12">
-                                <div class="col-lg-3">
+                          <div class="col-lg-12 reg-nopad">
+                                <div class="col-lg-3 reg-nopad">
                                     <p>Flyer Title<i style="margin-left:10px; color:#CC0000;">*</i></p>
                                 </div>
-                                <div class="col-lg-7">
+                                <div class="col-lg-7 reg-nopad">
                                       <input name="title" id="title" type="text" class="form-control">
                                       <input type="hidden" name="action" value="process" />
                                        <input name="user_id" type="hidden" value="<?php echo $user_id; ?>">
@@ -180,36 +180,36 @@ else{ ?>
                                         <input type="hidden" name="cmd" value="_cart" /> <?php // use _cart for cart checkout ?>
     <input type="hidden" name="currency_code" value="USD" />
                                 </div>
-                                <div class="col-lg-2">
+                                <div class="col-lg-2 reg-nopad">
                                 </div>
                             </div>
-                            <div class="col-lg-12" style="margin-top:20px;">
-                                <div class="col-lg-3">
+                            <div class="col-lg-12 reg-nopad" style="margin-top:20px;">
+                                <div class="col-lg-3 reg-nopad">
                                     <p>Company Name</p>
                                 </div>
-                                <div class="col-lg-7">
+                                <div class="col-lg-7 reg-nopad">
                                       <input name="company" type="text" class="form-control">
                                 </div>
-                                <div class="col-lg-2">
+                                <div class="col-lg-2 reg-nopad">
                                 </div>
                             </div>
-                            <div class="col-lg-12" style="margin-top:20px;">
-                                <div class="col-lg-3">
+                            <div class="col-lg-12 reg-nopad" style="margin-top:20px;">
+                                <div class="col-lg-3 reg-nopad">
                                     <p> Flyer Description<i style="margin-left:10px; color:#CC0000;">*</i></p>
                                 </div>
-                                <div class="col-lg-8">
+                                <div class="col-lg-8 reg-nopad">
                                       <textarea name="description" id="description" class="form-control"></textarea>
                                 </div>
-                                <div class="col-lg-1">
+                                <div class="col-lg-1 reg-nopad">
                                 </div>
                             </div>
-                            
+
                         </div>
-                        
+
                     </div>
-                    
+
                 </div>
-              
+
                 <div class="col-lg-12">
                   <div class="deals_content">
                       <br>
@@ -217,63 +217,63 @@ else{ ?>
                           <h4>Flyer Location</h4>
                         </div>
                         <div class="deals_form">
-                          <div class="col-lg-12">
-                                <div class="col-lg-3">
+                          <div class="col-lg-12 reg-nopad">
+                                <div class="col-lg-3 reg-nopad">
                                     <p>Country<i style="margin-left:10px; color:#CC0000;">*</i></p>
                                 </div>
-                                <div class="col-lg-5">
+                                <div class="col-lg-5 reg-nopad">
                                      <select class="form-control" id="country" name ="country"></select>
                                 </div>
-                                <div class="col-lg-4">
+                                <div class="col-lg-4 reg-nopad">
                                 </div>
                             </div>
-                            <div class="col-lg-12" style="margin-top:20px;">
-                                <div class="col-lg-3">
+                            <div class="col-lg-12 reg-nopad" style="margin-top:20px;">
+                                <div class="col-lg-3 reg-nopad">
                                     <p>State<i style="margin-left:10px; color:#CC0000;">*</i></p>
                                 </div>
-                                <div class="col-lg-5">
+                                <div class="col-lg-5 reg-nopad">
                                     <select class="form-control" name ="state" id ="state"></select>
                                 </div>
-                                <div class="col-lg-4">
+                                <div class="col-lg-4 reg-nopad">
                                 </div>
                             </div>
-                            <div class="col-lg-12" style="margin-top:20px;">
-                                <div class="col-lg-3">
+                            <div class="col-lg-12 reg-nopad" style="margin-top:20px;">
+                                <div class="col-lg-3 reg-nopad">
                                     <p>City<i style="margin-left:10px; color:#CC0000;">*</i></p>
                                 </div>
-                                <div class="col-lg-7">
+                                <div class="col-lg-7 reg-nopad">
                                      <input name="city" type="text" class="form-control">
                                 </div>
-                                <div class="col-lg-2">
+                                <div class="col-lg-2 reg-nopad">
                                 </div>
                             </div>
-                            <div class="col-lg-12" style="margin-top:20px;">
-                                <div class="col-lg-3">
+                            <div class="col-lg-12 reg-nopad" style="margin-top:20px;">
+                                <div class="col-lg-3 reg-nopad">
                                     <p>Postal code<i style="margin-left:10px; color:#CC0000;">*</i></p>
                                 </div>
-                                <div class="col-lg-7">
+                                <div class="col-lg-7 reg-nopad">
                                      <input name="postalcode" type="text" class="form-control">
                                 </div>
-                                <div class="col-lg-2">
+                                <div class="col-lg-2 reg-nopad">
                                 </div>
                             </div>
-								 <div class="col-lg-12" style="margin-top:20px;">
-                                <div class="col-lg-3">
+								 <div class="col-lg-12 reg-nopad" style="margin-top:20px;">
+                                <div class="col-lg-3 reg-nopad">
                                     <p>Expiration Date</p>
                                 </div>
-                                <div class="col-lg-7">
+                                <div class="col-lg-7 reg-nopad">
                                      <input name="expire" type="text"  id="datepicker">
                                 </div>
-                                <div class="col-lg-2">
+                                <div class="col-lg-2 reg-nopad">
                                 </div>
                             </div>
-                            
+
                         </div>
-                        
+
                     </div>
-                    
+
                 </div>
-              
+
                 <div class="col-lg-12">
                   <div class="deals_content">
                       <br>
@@ -281,37 +281,37 @@ else{ ?>
                           <h4>Your Contact Information</h4>
                         </div>
                         <div class="deals_form">
-                          
-                            
-                            <div class="col-lg-12" style="margin-top:20px;">
-                                <div class="col-lg-3"><span class="country_code"></span>
+
+
+                            <div class="col-lg-12 reg-nopad" style="margin-top:20px;">
+                                <div class="col-lg-3 reg-nopad"><span class="country_code"></span>
                                     <p>Phone</p>
                                 </div>
-                                <div class="col-lg-7">
+                                <div class="col-lg-7 reg-nopad">
                                      <input name="current_city" type="text" class="form-control">
                                      <p style="margin:5px 0 0"><input type="checkbox" value="1" id="share_phone" name="share_phone" /> Share my phone number with others</p>
                                 </div>
-                                <div class="col-lg-2">
+                                <div class="col-lg-2 reg-nopad">
                                 </div>
                             </div>
-                            <div class="col-lg-12" style="margin-top:20px;">
-                                <div class="col-lg-3">
+                            <div class="col-lg-12 reg-nopad" style="margin-top:20px;">
+                                <div class="col-lg-3 reg-nopad">
                                     <p>Email<i style="margin-left:10px; color:#CC0000;">*</i></p>
                                 </div>
-                                <div class="col-lg-7">
+                                <div class="col-lg-7 reg-nopad">
                                      <input name="current_postalcode" type="text" class="form-control">
                                      <p style="margin:5px 0 0"><input type="checkbox" value="1" id="share_email" name="share_email" /> Share my email with others</p>
                                 </div>
-                                <div class="col-lg-2">
+                                <div class="col-lg-2 reg-nopad">
                                 </div>
                             </div>
-                            
+
                         </div>
-                        
+
                     </div>
-                    
+
                 </div>
-            
+
                 <div class="col-lg-12">
                   <div class="deals_content">
                       <br>
@@ -319,8 +319,8 @@ else{ ?>
                           <h4>Links and Pictures</h4>
                         </div>
                         <div class="deals_form">
-                          
-                            
+
+
                             <div class="col-lg-12">
                                 <div class="col-lg-1">
                                     <input type="checkbox" class="click1" name="website" value="5"  id="website" onclick="">
@@ -328,7 +328,7 @@ else{ ?>
                                 <div class="col-lg-4">
                                      <button type="button" class="btn btn-warning btn-sm click1" style="border:none; margin-left:-30px; margin-top:5px;">Website Link</button>
                                 </div>
-                                
+
                                  <div class="col-lg-1">
                                     <input type="checkbox" class="click11" >
                                 </div>
@@ -345,13 +345,13 @@ else{ ?>
                                 </div>
                             </div>
                             <div class="deals_click">  <br>
-							
+
 				   <div class="col-lg-1" style="margin-left:48px; display:none">
                                     <input type="radio"  name="weblink" id="weblink" value="$5" onClick="checkTotal()">
                             </div>
-							
 
-							
+
+
                             <div class="col-lg-12">
                                 <div class="col-lg-3">
                                     <p>Website URL<i style="margin-left:10px; color:#CC0000;">*</i></p>
@@ -371,17 +371,17 @@ else{ ?>
                                 </div>
                                 <div class="col-lg-2">
                                 </div>
-                            </div>  
+                            </div>
                             <div class="col-lg-12" style="margin-top:10px;" id="deals_click111">
                                 <div class="col-lg-3">
                                    <p>Logo images<i style="margin-left:10px; color:#CC0000;">*</i></p>
                                     <p>Flyer images<i style="margin-left:10px; color:#CC0000;">*</i></p>
 				<br><br>
-<strong>Images should be of size 6000*4000 or Max file size 4MB. Limit 5 images. Extra images will be charged $1 each</strong>					
+<strong>Images should be of size 6000*4000 or Max file size 4MB. Limit 5 images. Extra images will be charged $1 each</strong>
                                 </div>
 	    <div class="col-lg-8">
                                        <input type="file" name="file2" class="btn btn btn-primary btn6" value="Post Your Deal" accept="image/x-png, image/gif, image/jpeg"/><br />
-									   
+
 									   <span class="upload-btn btn-successs fileinput-button">
 											<i class="glyphicon glyphicon-plus"></i>
 											<span>Select image</span>
@@ -390,25 +390,25 @@ else{ ?>
 											<input  type="file" id="fileupload" class="btn btn btn-primary btn6"  accept="image/x-png, image/gif, image/jpeg"/>
 											<input  type="hidden" id="total_images" name="total_images"/><br />
 											</span>
-											
+
 											<div id="progress" class="progress">
 												<div class="progress-bar progress-bar-success"></div>
 											</div>
-										  
+
 											<div id="files" onchange="" class="files"></div>
                                 </div>
                                 <div class="col-lg-7">
 
                                 </div>
-					
-                            </div> 
+
+                            </div>
                              <div class="col-lg-12" style="margin-top:10px;">
-                             
-                             </div> 
-                            </div>                       
+
+                             </div>
+                            </div>
                         </div>
-                    
-                 </div><?php 
+
+                 </div><?php
 if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership') {
 }
               else  {?>
@@ -419,8 +419,8 @@ if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership')
                           <h4>Flyer Publishing Plan</h4>
                         </div>
                         <div class="deals_form">
-                          
-                            
+
+
                             <div class="col-lg-12" >
                                 <div class="col-lg-1">
                                     <input type="radio" name="regular" value="20"  onClick="showIPAddress(this);checksubtotal(this.value)"/>
@@ -429,7 +429,7 @@ if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership')
                                 <p style="background:#f79e12; padding:5px; margin-left:-20px; margin-top:5px;">Regular - $20permonth(post will be on Deals page)</p>
                                 </div>
                                 <div class="col-lg-4"></div>
-                            </div>  
+                            </div>
                              <div class="col-lg-12">
                                 <div class="col-lg-1" >
                                     <input type="radio" name="regular" value="60" onClick="showIPAddress(this);checksubtotal(this.value)"/>
@@ -438,7 +438,7 @@ if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership')
                                 <p style="background:#f79e12; padding:5px; margin-left:-20px; margin-top:5px;">premium -$60permonth(post will be on Homepage-Gallery Section)</p>
                                 </div>
                                 <div class="col-lg-4"></div>
-                            </div>       
+                            </div>
                              <div class="col-lg-12">
                                 <div class="col-lg-1">
                                     <input type="radio"  name="regular" value="80" onClick="showIPAddress(this);checksubtotal(this.value)"/>
@@ -447,12 +447,12 @@ if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership')
                                 <p style="background:#f79e12; padding:5px; margin-left:-20px;margin-top:5px;">premium -$80 per 2months)</p>
                                 </div>
                                 <div class="col-lg-6"></div>
-                            </div>       
-                                                      
+                            </div>
+
                         </div>
                     </div>
                  </div>--><?php } ?>
-                 <script type="text/javascript "src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script> 
+                 <script type="text/javascript "src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 <script type='text/javascript'>
 $(document).ready(function(){
 $("#show1").show();
@@ -561,7 +561,7 @@ function unlink_file(file_name,counter_value){
 		$("#img_box_link_"+counter_value).remove();
 		$("#img_box_"+counter_value).remove();
 		$("#image_hidden_id_"+counter_value).remove();
-		
+
 		var total_images = $("#total_images").val();
 		$("#total_images").val(total_images-1);
 		calcTotal();
@@ -571,7 +571,7 @@ function unlink_file(file_name,counter_value){
 					$("#total").val(price_total-1);
 					$("#total_images").val(total_images-1);*/
 		}
-     
+
       }
     });
 }
@@ -623,13 +623,13 @@ j(function () {
                         <div class="deals_form">
      <script>
   function showIPAddress(chk) {
-	//alert(chk.checked);	
+	//alert(chk.checked);
 //      document.getElementById("div1").style.display = chk.checked ? "block" : "none";
 //      document.getElementById("div2").style.display = chk.checked ? "none" : "block";
   }
 </script>
 
-                            
+
                             <div class="col-lg-12">
                                 <div class="col-lg-1">
                                     <input type="checkbox" class="click2" name="highlight" value="high" onClick="showIPAddress(this);subtotal()">
@@ -638,12 +638,12 @@ j(function () {
                                 <p onclick="$('.click2').click()" style="background:#f79e12; padding:5px; margin-left:-20px; margin-top:5px;">Hightlighted Flyer</p>
                                 </div>
                                 <div id="show1" class="col-lg-6"></div>
-                            </div>  
+                            </div>
                           <div class="deals_work2">
                              <div class="col-lg-12">
                               <div class="col-lg-1"></div>
-                              <?php 
-if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership') 
+                              <?php
+if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership')
 {
 }
               else  {?>
@@ -682,9 +682,9 @@ if ($static['status']=='Gold Membership' )
                                 <p style=" margin-left:-20px; margin-top:5px;">Become a member:</p>
                                 </div>
                                 <div class="col-lg-6">
-                                
+
                                 </div>
-                              
+
                             </div><div class="deals_work7">
                              <div class="col-lg-12"> <?php
 if ($static['status']=='Pro Membership' )
@@ -695,12 +695,12 @@ if ($static['status']=='Pro Membership' )
                               <div class="col-lg-1">
                                     <input type="radio" name="membership" value="50"  onClick="checksubtotal(this.value)" >
                                 </div>
-                                
+
                                 <div class="col-lg-2">
                                 <p style=" margin-left:-20px; margin-top:10px;">pro member -$50per month</p>
                                 </div><?php } ?>
                                 <div class="col-lg-2">
-                                
+
                                 </div>
                                 <div class="col-lg-1">
                                     <input type="radio"  name="membership" value="80"  onClick="checksubtotal(this.value)">
@@ -709,9 +709,9 @@ if ($static['status']=='Pro Membership' )
                                 <p style=" margin-left:-20px; margin-top:10px;">Gold member -$80per month</p>
                                 </div>
                                 <div class="col-lg-3">
-                                
+
                                 </div>
-                              
+
                             </div>
                             <div class="col-lg-12"> <?php
 if ($static['status']=='Pro Membership' )
@@ -720,25 +720,25 @@ if ($static['status']=='Pro Membership' )
                          else {  ?>
                               <div class="col-lg-2"></div>
                               <div class="col-lg-4" style="border:#fff solid 1px;">
-                                
+
                                 <p style=" margin-top:10px;">you'll have 5 highlighted Flyers included + more</p>
                                   <button type="button" class="btn btn-sm btn-warning pull-right" style="margin-bottom:20px;">Read More</button>
                                 </div><?php } ?>
                                 <div class="col-lg-2">
-                                   
+
                                 </div>
                                 <div class="col-lg-4" style="border:#fff solid 1px;">
                                  <p style=" margin-left:-10px; margin-top:10px;">you'll have 10 highlighted Flyers included + a lot more</p>
                                  <button type="button" class="btn btn-sm btn-warning pull-right" style="margin-bottom:20px;">Read More</button>
                                 </div>
                                 <div class="col-lg-1">
-                                
+
                                 </div>
-                              
+
                             </div>-->
                                           </div><?php } ?>
 
-                          </div> 
+                          </div>
                              <div class="col-lg-12">
                                 <div class="col-lg-1">
                                     <input type="checkbox" class=" click3" name="promote_ads1" value="top"onClick="showIPAddress(this);subtotalnew()">
@@ -747,16 +747,16 @@ if ($static['status']=='Pro Membership' )
                                 <p onclick="$('.click3').click()" style="background:#f79e12; padding:5px; margin-left:-20px; margin-top:5px;">Top Flyer</p>
                                 </div>
                                 <div id="show2" class="col-lg-6"></div>
-                            </div>  
+                            </div>
                             <div class="deals_work3">
                              <div class="col-lg-12">
                               <div class="col-lg-1"></div>
-                              <?php 
+                              <?php
 if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership') {
 }
               else  {?>
-			  
-			  
+
+
                                 <div class="col-lg-1">
                                     <input class="abc" type="radio" name="top" value="2" onClick="subtotalnew()" checked>
                                 </div>
@@ -791,9 +791,9 @@ if ($static['status']=='Gold Membership' )
                                 <p style=" margin-left:-20px; margin-top:5px;">Become a member:</p>
                                 </div>
                                 <div class="col-lg-6">
-                                
+
                                 </div>
-                              
+
                             </div><?php } ?><div class="deals_work8">
                              <div class="col-lg-12"> <?php
 if ($static['status']=='Pro Membership' )
@@ -804,12 +804,12 @@ if ($static['status']=='Pro Membership' )
                               <div class="col-lg-1">
                                     <input type="radio" name="member1" value="50" onClick="checksubtotal(this.value)">
                                 </div>
-                                
+
                                 <div class="col-lg-2">
                                 <p style=" margin-left:-20px; margin-top:10px;">pro member -$50 per month</p>
                                 </div><?php } ?>
                                 <div class="col-lg-2">
-                                
+
                                 </div>
                                 <div class="col-lg-1">
                                     <input type="radio"  name="member1" value="80" onClick="checksubtotal(this.value)">
@@ -818,9 +818,9 @@ if ($static['status']=='Pro Membership' )
                                 <p style=" margin-left:-20px; margin-top:10px;">Gold member -$80 per month</p>
                                 </div>
                                 <div class="col-lg-3">
-                                
+
                                 </div>
-                              
+
                             </div>
                             <div class="col-lg-12"> <?php
 if ($static['status']=='Pro Membership' )
@@ -829,19 +829,19 @@ if ($static['status']=='Pro Membership' )
                          else {  ?>
                               <div class="col-lg-2"></div>
                               <div class="col-lg-4" style="border:#fff solid 1px;">
-                                
+
                                 <p style=" margin-top:10px;">you'll have 3 top Flyers included + more </p>
                                   <button type="button" class="btn btn-sm btn-warning pull-right" style="margin-bottom:20px;">Read More</button>
                                 </div><?php } ?>
                                 <div class="col-lg-2">
-                                   
+
                                 </div>
                                 <div class="col-lg-4" style="border:#fff solid 1px;">
                                  <p style=" margin-left:-10px; margin-top:10px;">you'll have 6 top Flyers included + a lot more</p>
                                  <button type="button" class="btn btn-sm btn-warning pull-right" style="margin-bottom:20px;">Read More</button>
                                 </div>
                                 <div class="col-lg-1">
-                                
+
                                 </div>
                               </div>--><?php } ?>
                             </div>
@@ -854,11 +854,11 @@ if ($static['status']=='Pro Membership' )
                                 <p onclick="$('.click4').click()" style="background:#f79e12; padding:5px; margin-left:-20px; margin-top:5px;">Home page Gallery Flyer</p>
                                 </div>
                                 <div id="show3" class="col-lg-6"></div>
-                            </div>  
+                            </div>
                             <div class="deals_work4">
                              <div class="col-lg-12">
                               <div class="col-lg-1"></div>
-                              <?php 
+                              <?php
 if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership') {
 }
               else  {?>
@@ -896,9 +896,9 @@ if ($static['status']=='Gold Membership' )
                                 <p style=" margin-left:-20px; margin-top:5px;">Become a member:</p>
                                 </div>
                                 <div class="col-lg-6">
-                                
+
                                 </div>
-                              
+
                             </div><?php } ?>
               <div class="deals_work9">
                              <div class="col-lg-12"> <?php
@@ -910,12 +910,12 @@ if ($static['status']=='Pro Membership' )
                               <div class="col-lg-1">
                                     <input type="radio" name="membership_home" value="50" onClick="checksubtotal(this.value)">
                                 </div>
-                                
+
                                 <div class="col-lg-2">
                                 <p style=" margin-left:-20px; margin-top:10px;">pro member -$50 per month</p>
                                 </div><?php } ?>
                                 <div class="col-lg-2">
-                                
+
                                 </div>
                                 <div class="col-lg-1">
                                     <input type="radio"  name="membership_home" value="80" onClick="checksubtotal(this.value)">
@@ -924,9 +924,9 @@ if ($static['status']=='Pro Membership' )
                                 <p style=" margin-left:-20px; margin-top:10px;">Gold member -$80 per month</p>
                                 </div>
                                 <div class="col-lg-3">
-                                
+
                                 </div>
-                              
+
                             </div>
                             <div class="col-lg-12"> <?php
 if ($static['status']=='Pro Membership' )
@@ -935,19 +935,19 @@ if ($static['status']=='Pro Membership' )
                          else {  ?>
                               <div class="col-lg-2"></div>
                               <div class="col-lg-4" style="border:#fff solid 1px;">
-                                
+
                                 <p style=" margin-top:10px;">you'll have 5 home page Flyers included + more </p>
                                   <button type="button" class="btn btn-sm btn-warning pull-right" style="margin-bottom:20px;">Read More</button>
                                 </div><?php } ?>
                                 <div class="col-lg-2">
-                                   
+
                                 </div>
                                 <div class="col-lg-4" style="border:#fff solid 1px;">
                                  <p style=" margin-left:-10px; margin-top:10px;">you'll have 10 home page Flyers included + a lot more</p>
                                  <button type="button" class="btn btn-sm btn-warning pull-right" style="margin-bottom:20px;">Read More</button>
                                 </div>
                                 <div class="col-lg-1">
-                                
+
                                 </div>
                               </div>--><?php } ?>
                             </div>
@@ -960,11 +960,11 @@ if ($static['status']=='Pro Membership' )
                                 <p onclick="$('.click5').click()" style="background:#f79e12; padding:5px; margin-left:-20px;margin-top:5px;">Sidebar Flyer</p>
                                 </div>
                                 <div id="show4" class="col-lg-6"></div>
-                            </div>   
+                            </div>
                             <div class="deals_work5">
                              <div class="col-lg-12">
                               <div class="col-lg-1"></div>
-                              <?php 
+                              <?php
 if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership') {
 }
               else  {?>
@@ -1002,9 +1002,9 @@ if ($static['status']=='Gold Membership' )
                                 <p style=" margin-left:-20px; margin-top:5px;">Become a member:</p>
                                 </div>
                                 <div class="col-lg-6">
-                                
+
                                 </div>
-                              
+
                             </div><?php } ?><div class="deals_work10">
                              <div class="col-lg-12"> <?php
 if ($static['status']=='Pro Membership' )
@@ -1015,12 +1015,12 @@ if ($static['status']=='Pro Membership' )
                               <div class="col-lg-1">
                                     <input type="radio" name="membership_sidebar" value="50" onClick="checksubtotal(this.value)">
                                 </div>
-                                
+
                                 <div class="col-lg-2">
                                 <p style=" margin-left:-20px; margin-top:10px;">pro member -$50 per month</p>
                                 </div><?php } ?>
                                 <div class="col-lg-2">
-                                
+
                                 </div>
                                 <div class="col-lg-1">
                                     <input type="radio"  name="membership_sidebar" value="80" onClick="checksubtotal(this.value)">
@@ -1029,9 +1029,9 @@ if ($static['status']=='Pro Membership' )
                                 <p style=" margin-left:-20px; margin-top:10px;">Gold member -$80 per month</p>
                                 </div>
                                 <div class="col-lg-3">
-                                
+
                                 </div>
-                              
+
                             </div>
                             <div class="col-lg-12"> <?php
 if ($static['status']=='Pro Membership' )
@@ -1040,23 +1040,23 @@ if ($static['status']=='Pro Membership' )
                          else {  ?>
                               <div class="col-lg-2"></div>
                               <div class="col-lg-4" style="border:#fff solid 1px;">
-                                
+
                                 <p style=" margin-top:10px;">you'll have 2 sidebar Flyers included + more</p>
                                   <button type="button" class="btn btn-sm btn-warning pull-right" style="margin-bottom:20px;">Read More</button>
                                 </div><?php } ?>
                                 <div class="col-lg-2">
-                                   
+
                                 </div>
                                 <div class="col-lg-4" style="border:#fff solid 1px;">
                                  <p style=" margin-left:-10px; margin-top:10px;">you'll have 4 sidebar Flyers included + a lot more</p>
                                  <button type="button" class="btn btn-sm btn-warning pull-right" style="margin-bottom:20px;">Read More</button>
                                 </div>
                                 <div class="col-lg-1">
-                                
+
                                 </div>
                               </div>--><?php } ?>
                             </div>
-                          </div>    
+                          </div>
                             <div class="col-lg-12">
                                 <div class="col-lg-1">
                                     <input type="checkbox" class=" click6" name="promote_ads4" value="slider" onClick="showIPAddress(this);subtotalnew3()">
@@ -1065,11 +1065,11 @@ if ($static['status']=='Pro Membership' )
                                 <p onclick="$('.click6').click()" style="background:#f79e12; padding:5px; margin-left:-20px;margin-top:5px;">Top Feature Home page slider Flyer</p>
                                 </div>
                                 <div class="col-lg-6"></div>
-                            </div> 
+                            </div>
                            <div class="deals_work6">
                              <div class="col-lg-12">
                               <div class="col-lg-1"></div>
-                              <?php 
+                              <?php
 if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership') {
 }
               else  {?>
@@ -1107,9 +1107,9 @@ if ($static['status']=='Gold Membership' )
                                 <p style=" margin-left:-20px; margin-top:5px;">Become a member:</p>
                                 </div>
                                 <div class="col-lg-6">
-                                
+
                                 </div>
-                              
+
                             </div><?php } ?> <div class="deals_work11">
                              <div class="col-lg-12"> <?php
 if ($static['status']=='Pro Membership' )
@@ -1120,12 +1120,12 @@ if ($static['status']=='Pro Membership' )
                               <div class="col-lg-1">
                                     <input type="radio" class="click11" name="membership_topfeature" value="50"                  onClick="checksubtotal(this.value)">
                                 </div>
-                                
+
                                 <div class="col-lg-2">
                                 <p style=" margin-left:-20px; margin-top:10px;">Upgrade Pro Membership</p>
                                 </div><?php } ?>
                                 <div class="col-lg-2">
-                                
+
                                 </div>
                                 <div class="col-lg-1">
                                     <input type="radio"  name="membership_topfeature" value="80" onClick="checksubtotal(this.value)">
@@ -1134,11 +1134,11 @@ if ($static['status']=='Pro Membership' )
                                 <p style=" margin-left:-20px; margin-top:10px;">Upgrade Gold Membership</p>
                                 </div>
                                 <div class="col-lg-3">
-                                
+
                                 </div>
-                              
+
                             </div>
-            
+
                             <div class="col-lg-12"> <?php
 if ($static['status']=='Pro Membership' )
 
@@ -1146,12 +1146,12 @@ if ($static['status']=='Pro Membership' )
                          else {  ?>
                               <div class="col-lg-2"></div>
                               <div class="col-lg-4" style="border:#fff solid 1px;">
-                                
+
                                 <p style=" margin-top:10px;">you'll have 4 sidebar Flyers included + a lot more</p>
                                   <button type="button" class="btn btn-sm btn-warning pull-right" style="margin-bottom:20px;">Read More</button>
                                 </div><?php } ?>
                                 <div class="col-lg-2">
-                                   
+
                                 </div>
                                 <div class="col-lg-4" style="border:#fff solid 1px;">
                                  <p style=" margin-left:-10px; margin-top:10px;">you'll have 4 sidebar Flyers included + a lot more</p>
@@ -1161,8 +1161,8 @@ if ($static['status']=='Pro Membership' )
                                     </div>
                               </div>--><?php } ?>
                             </div>
-                          </div> <br>     
-                            
+                          </div> <br>
+
 <!--                               <div class="col-lg-12">-->
 <!--                                <div class="col-lg-1">-->
 <!--                                    <input type="checkbox" class="click10" name="promote10" value="urgent1" onClick="showIPAddress(this);subtotal10()">-->
@@ -1272,19 +1272,19 @@ if ($static['status']=='Pro Membership' )
                     </div>
                  </div>
                  <div class="col-lg-12">
-                  <p  style="margin-left:30px; margin-top:30px;"> By posting this Flyer,you are agreeing with our <a href="#"> terms and conditions </a></p>                    <?php 
+                  <p  style="margin-left:30px; margin-top:30px;"> By posting this Flyer,you are agreeing with our <a href="#"> terms and conditions </a></p>                    <?php
 if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership') { } else {?> <p class="pull-right"><span style="font-weight:bold;font-family:arial;font-size:18px;">Total Price:</span>:&nbsp;$ <input type="text" name="total" value="20" style="border:none; background:#e2e2e2;"> </p><?php } ?>
-                   
+
                  </div>
 				 <div class="col-lg-12">
 				    <!--input type="button" class="btn btn btn-primary pull-right btn6" id="btnPreview" value="Preview"-->
-				    <input  id="div1" style="display:block;"  type="submit" class="btn btn btn-primary pull-right btn6" value="Post My Flyer" /><!--onclick="this.form.target='_blank';return true;"-->  
+				    <input  id="div1" style="display:block;"  type="submit" class="btn btn btn-primary pull-right btn6" value="Post My Flyer" /><!--onclick="this.form.target='_blank';return true;"-->
 					<!-- input  id="div2" type="submit" class="btn btn btn-primary pull-right btn6" value="Post My Flyer" onclick="listForm.action='flyers_process.php' ; return true;" -->
 				 </div>
                 </div>
                  </form>
-             <?php 
-      
+             <?php
+
              include('footer.php');
              ?>
 <script src="js/jquery-1.11.1.min.js"></script>
@@ -1293,10 +1293,10 @@ if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership')
 
 <script src="js/magnific-popup.js"></script>
 
-<script type="text/javascript">				 
+<script type="text/javascript">
 	$(document).ready(function(){
 		$('.image-link').magnificPopup({type:'image'});
-		
+
 		$( "#dialog3" ).dialog({
         autoOpen: false,
          show: {
@@ -1318,19 +1318,19 @@ if ($static['status']=='Pro Membership' OR $static['status']=='Gold Membership')
 	 $.ajax({
        url: 'http://trademydeals.com/flyerPreview.php',
        method:'POST',
-       data: formData,   
+       data: formData,
        success: function(data) {
 		 if($("#title").val() != '' || $("#description").val() != '')
-		 {	 
-          $("#dialog3").html(data);  
+		 {
+          $("#dialog3").html(data);
 		  $("#dialog3").dialog("open");
 		  } else {
-			alert("No Preview Data Available");  
+			alert("No Preview Data Available");
 			return false;
-		  }	  
+		  }
        }
     });
-  });	
+  });
   });
   populateCountries("country", "state");
 </script>

@@ -15,17 +15,17 @@ include('header.php');
     <div class="content">
     <div class="container">
     <div class="col-lg-12">
-        <div class="col-lg-9">
+        <div class="col-lg-9  mobile-nopad">
             <div class="col-lg-12">
                 <div class="col-lg-10">
                     <div class="sub1" style="margin-top:20px; margin-bottom:15px; margin-left:-5px;">
                         <h4>Ads</h4>
                     </div>
                 </div>
-                <div class="col-lg-2" style="margin-top:20px;">
+                <div class="col-lg-2 post-btn" style="margin-top:20px;">
                     <a href="postad.php">
                         <button type="button" class="btn btn-danger btn-lg" style="border-top-left-radius:10px;
-border-top-right-radius:10px;border-bottom-left-radius:10px; padding:8px 16px; 
+border-top-right-radius:10px;border-bottom-left-radius:10px; padding:8px 16px;
 border-bottom-right-radius:10px; margin-left:10px;">Post Ad
                         </button>
                     </a>
@@ -157,7 +157,7 @@ border-bottom-right-radius:10px; margin-left:10px;">Post Ad
                     // $search=isset($_GET['search'])? $_GET['search']:'';
 
                     $query = "(SELECT * FROM `ads` where  (promote_ads = 'high' or promote_ads = '') and payment_status = '1' and status = '1' and country =  '$country_name' ORDER BY promote_ads DESC, date_time desc )";
-                    
+
                     // database query. Enter your query here
                     // end config---------------------------------
 
@@ -208,7 +208,7 @@ border-bottom-right-radius:10px; margin-left:10px;">Post Ad
 
             </div>
         </div>
-        <div class="col-lg-12" style="display:<?php echo $none_all_ads; ?>" ;>
+        <div class="col-lg-12 media-pagination" style="display:<?php echo $none_all_ads; ?>" ;>
             <?php
 
 

@@ -7,84 +7,80 @@
         while ($slider1= mysql_fetch_object($query3))
 
         {?>
-            <div class="content2" style="margin-top:10px;">
-            <li>
+            <li class="content2" style="margin-top:10px;">
             <img src="img/<?php echo get_post_image($slider1->id,'deals');?>" class="img-responsive">
 
             <a href="getdeals.php?id=<?php echo $slider1->id; ?>"><h3><?php echo get_post_tile_string($slider1->deals_title); ?></h3>
                 <p><?php echo substr($slider1->description,0,15).'...'; ?></p>
                 <button type="button" class="btn btn-sm btn-danger pull-right btn5">View</button></a>
             </li>
-            </div><?php }  $sel_Query4 = "SELECT * FROM `coupons`  where promote_coupons3 = 'sidebar' and country='$country_name' and payment_status = '1'   ORDER BY id desc limit 1";
+            <?php }  $sel_Query4 = "SELECT * FROM `coupons`  where promote_coupons3 = 'sidebar' and country='$country_name' and payment_status = '1'   ORDER BY id desc limit 1";
         $query4 = mysql_query($sel_Query4);
 
         while ($slider2= mysql_fetch_object($query4))
 
         { ?>
-            <div class="content2" style="margin-top:10px;">
-            <li>
+            <li class="content2" style="margin-top:10px;">
             <img src="img/<?php echo get_post_image($slider2->id,'coupons');?>" class="img-responsive">
 
             <a href="getcoupons.php?id=<?php echo $slider2->id; ?>"><h3><?php echo get_post_tile_string($slider2->coupon); ?></h3>
                 <p><?php  echo substr($slider2->description,0,15).'...';?></p>
                 <button type="button" class="btn btn-sm btn-danger pull-right btn5">View</button></a>
             </li>
-            </div><?php }   $sel_Query5 = "SELECT * FROM `flyers`  where promote_flyers3 = 'sidebar' and country='$country_name' and payment_status = '1'   ORDER BY id desc LIMIT 1";
+            <?php }   $sel_Query5 = "SELECT * FROM `flyers`  where promote_flyers3 = 'sidebar' and country='$country_name' and payment_status = '1'   ORDER BY id desc LIMIT 1";
         $query5 = mysql_query($sel_Query5);
 
         while ($slider3= mysql_fetch_object($query5))
 
         { ?>
-            <div class="content2" style="margin-top:10px;">
-            <li>
+            <li class="content2" style="margin-top:10px;">
             <img src="img/<?php echo get_post_image($slider3->id,'flyers');?>" class="img-responsive">
 
 
-            <a href="getflyers.php?id=<?php echo $slider3->id; ?>"><h3><?php echo get_post_tile_string($slider3->flyers_title); ?></h3>
+            <a href="getflyers.php?id=<?php echo $slider3->id; ?>">
+                <h3><?php echo get_post_tile_string($slider3->flyers_title); ?></h3>
                 <p><?php  echo substr($slider3->description,0,15).'...';?></p>
-                <button type="button" class="btn btn-sm btn-danger pull-right btn5">View</button></a>
+                <button type="button" class="btn btn-sm btn-danger pull-right btn5">View</button>
+            </a>
             </li>
-            </div><?php }    $sel_Query6 = "SELECT * FROM `ads`  where promote_ads3 = 'sidebar' and country='$country_name'  and payment_status = '1'   ORDER BY id desc LIMIT 1";
+            <?php }    $sel_Query6 = "SELECT * FROM `ads`  where promote_ads3 = 'sidebar' and country='$country_name'  and payment_status = '1'   ORDER BY id desc LIMIT 1";
         $query6 = mysql_query($sel_Query6);
 
         while ($slider4= mysql_fetch_object($query6))
 
         { ?>
-            <div class="content2" style="margin-top:10px;">
-            <li>
+            <li class="content2" style="margin-top:10px;">
             <img src="img/<?php echo get_post_image($slider4->id,'ads');?>" class="img-responsive">
 
             <a href="getads.php?id=<?php echo $slider4->id; ?>"><h3><?php echo get_post_tile_string($slider4->ads_title); ?></h3>
                 <p><?php  echo substr($slider4->description,0,15).'...';?></p>
                 <button type="button" class="btn btn-sm btn-danger pull-right btn5">View</button></a>
             </li>
-            </div><?php }   $sel_Query7 = "SELECT * FROM `jobs`  where promote_jobs3 = 'sidebar' and country='$country_name' and payment_status = '1'   ORDER BY id desc LIMIT 1";
+            <?php }   $sel_Query7 = "SELECT * FROM `jobs`  where promote_jobs3 = 'sidebar' and country='$country_name' and payment_status = '1'   ORDER BY id desc LIMIT 1";
         $query7 = mysql_query($sel_Query7);
 
         while ($slider5= mysql_fetch_object($query7))
 
         { ?>
-            <div class="content2" style="margin-top:10px;">
-            <li> <img src="img/<?php echo get_post_image($slider5->id,'jobs');?>" class="img-responsive">
+            <li class="content2" style="margin-top:10px;"> <img src="img/<?php echo get_post_image($slider5->id,'jobs');?>" class="img-responsive">
 
             <a href="getjobs.php?id=<?php echo $slider5->id; ?>"><h3><?php echo get_post_tile_string($slider5->jobs_title); ?></h3>
                 <p><?php echo substr($slider5->description,0,15).'...'; ?></p>
                 <button type="button" class="btn btn-sm btn-danger pull-right btn5">View</button></a>
             </li>
-            </div><?php }   $sel_Query8 = "SELECT * FROM `resumes`  where promote_resumes3 = 'sidebar' and country='$country_name' and payment_status = '1'   ORDER BY id desc LIMIT 1";
+            <?php }   $sel_Query8 = "SELECT * FROM `resumes`  where promote_resumes3 = 'sidebar' and country='$country_name' and payment_status = '1'   ORDER BY id desc LIMIT 1";
         $query8 = mysql_query($sel_Query8);
 
         while ($slider6= mysql_fetch_object($query8))
 
         { ?>
-            <div class="content2" style="margin-top:10px;">
-            <li><img src="img/<?php echo get_post_image($slider6->id,'resumes');?>" class="img-responsive">
+            <li class="content2" style="margin-top:10px;"><img src="img/<?php echo get_post_image($slider6->id,'resumes');?>" class="img-responsive">
 
             <a href="getresumes.php?id=<?php echo $slider6->id; ?>"><h3><?php echo get_post_tile_string($slider6->resumes_title); ?></h3>
                 <p><?php echo substr($slider6->description,0,15).'...';?></p>
                 <button type="button" class="btn btn-sm btn-danger pull-right btn5">View</button></a>
             </li>
-            </div><?php  } ?>
+            <?php  } ?>
             </ul>
         </div>
 </div>
@@ -128,26 +124,26 @@
 <div class="footernew">
     <div class="container">
         <div class="col-lg-12">
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-md-3 col-sm-6">
                 <h3>Trade MyDeals Support</h3>
                 <li><a href="contactus.php">Contact Trade MyDeals</a></li>
                 <li><a href="safety-tips.php">Online Safety Tips</a></li>
                 <li><a href="/help.php">Trade MyDeals Help Page</a></li>
                 <li><a href="/questions.php">Frequently Asked Question</a></li>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-md-3 col-sm-6">
                 <h3>Trade MyDeals Information</h3>
                 <li><a href="member-benefit.php">Trade MyDeals Member Benefits</a></li>
                 <li><a href="aboutus.php">About Trade MyDeals</a></li>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-md-3 col-sm-6">
                 <h3>Explore Trade MyDeals</h3>
                 <li><a href="terms.php">Terms Of Use</a></li>
                 <li><a href="#">Privacy Policy</a></li>
                 <li><a href="posting-policy.php">Posting Policy</a></li>
                 <li><a href="advertise.php">Advertise With Us</a></li>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-md-3 col-sm-6">
                 <h3>Quick Link</h3>
                 <li><a href="deals.php">Deals</a></li>
                 <li><a href="coupons.php">Coupons</a></li>
